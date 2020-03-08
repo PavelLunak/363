@@ -14,6 +14,14 @@ public class Coordinates implements Parcelable {
         this.y = y;
     }
 
+    public void addX() {
+        this.x += 1;
+    }
+
+    public void addY() {
+        this.y += 1;
+    }
+
 
     public int getX() {
         return x;

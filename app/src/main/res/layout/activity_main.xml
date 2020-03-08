@@ -1,13 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.lupa.a363.objects.ComponentRelay
+    <com.lupa.a363.objects.views.ComponentRelay
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#E3E3E3" />
+        android:background="#E3E3E3"
+        app:cDirection="TOP"
+        app:cLabel="K36"
+        app:cOrientation="VERTICAL" />
+
+    <com.lupa.a363.objects.views.LayoutWiringDiagram
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E8FAFF">
+
+        <com.lupa.a363.objects.views.ComponentRelay
+            android:id="@+id/component_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cDirection="NONE"
+            app:cLabel="K36"
+            app:cOrientation="VERTICAL" />
+
+        <com.lupa.a363.objects.views.ComponentRelay
+            android:id="@+id/component_02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cDirection="NONE"
+            app:cLabel="K02"
+            app:cOrientation="VERTICAL"
+            app:cToLeftOf="@+id/component_01" />
+
+        <com.lupa.a363.objects.views.ComponentRelay
+            android:id="@+id/component_03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cBelow="@+id/component_01"
+            app:cDirection="NONE"
+            app:cLabel="K03"
+            app:cOrientation="VERTICAL" />
+
+        <com.lupa.a363.objects.views.ComponentRelay
+            android:id="@+id/component_04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cAbove="@+id/component_01"
+            app:cDirection="NONE"
+            app:cLabel="K04"
+            app:cOrientation="VERTICAL" />
+
+        <com.lupa.a363.objects.views.ComponentContact
+            android:id="@+id/component_05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cBelow="@+id/component_03"
+            app:cContactLabel_1="11"
+            app:cContactLabel_2="22"
+            app:cDirection="NONE"
+            app:cLabel="K04"
+            app:cOrientation="VERTICAL" />
+
+    </com.lupa.a363.objects.views.LayoutWiringDiagram>
 
 </LinearLayout>
