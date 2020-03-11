@@ -58,8 +58,6 @@ public class LayoutWiringDiagram extends ViewGroup implements AppConstants {
             Component actualComponent = (Component) getChildAt(i);
             if (actualComponent.getCoordinates() == null) actualComponent.setCoordinates(0,0);
 
-            Log.i("fvsaf", "hasRelativePosition: " + actualComponent.hasRelativePosition());
-
             //Bez relativní pozice může být pouze objekt na pozici [1,1]
             if (!actualComponent.hasRelativePosition()) {
                 actualComponent.setCoordinates(1, 1);
@@ -68,19 +66,15 @@ public class LayoutWiringDiagram extends ViewGroup implements AppConstants {
                 Coordinates referenceObjectCoordinates;
 
                 if (actualComponent.toLeftOf > 0) {
-                    Log.i("fvsaf", "toLeftOf");
                     referenceObject = getChildById(actualComponent.toLeftOf);
 
                     addAllComponentsX(i);
                     referenceObjectCoordinates = referenceObject.getCoordinates();
 
-                    Log.i("fvsaf", "referenceObjectCoordinates: " + referenceObjectCoordinates.getX() + "," + referenceObjectCoordinates.getY());
-
                     actualComponent.setCoordinates(
                             referenceObjectCoordinates.getX() - 1,
                             referenceObjectCoordinates.getY());
                 } else if (actualComponent.toRightOf > 0) {
-                    Log.i("fvsaf", "toRightOf");
                     referenceObject = getChildById(actualComponent.toRightOf);
                     referenceObjectCoordinates = referenceObject.getCoordinates();
 
@@ -88,7 +82,6 @@ public class LayoutWiringDiagram extends ViewGroup implements AppConstants {
                             referenceObjectCoordinates.getX() + 1,
                             referenceObjectCoordinates.getY());
                 } else if (actualComponent.below > 0) {
-                    Log.i("fvsaf", "below");
                     referenceObject = getChildById(actualComponent.below);
                     referenceObjectCoordinates = referenceObject.getCoordinates();
 
@@ -96,7 +89,6 @@ public class LayoutWiringDiagram extends ViewGroup implements AppConstants {
                             referenceObjectCoordinates.getX(),
                             referenceObjectCoordinates.getY() + 1);
                 } else if (actualComponent.above > 0) {
-                    Log.i("fvsaf", "above");
                     referenceObject = getChildById(actualComponent.above);
                     addAllComponentsY(i);
                     referenceObjectCoordinates = referenceObject.getCoordinates();
@@ -107,16 +99,21 @@ public class LayoutWiringDiagram extends ViewGroup implements AppConstants {
                 }
             }
 
-            Log.i("fvsaf", "" + actualComponent.getId() + " - " + actualComponent.getCoordinates().getX() + "," + actualComponent.getCoordinates().getY());
+            int tempLeft =
+                    COMPONENT_FRAME
+                            + (actualComponent.getCoordinates().getX() * (COMPONENT_WIDTH + (0 * COMPONENT_FRAME)))
+                            - (COMPONENT_WIDTH + (2 * COMPONENT_FRAME));
 
-            int tempLeft = COMPONENT_FRAME + (actualComponent.getCoordinates().getX() * (COMPONENT_WIDTH + (0 * COMPONENT_FRAME))) - (COMPONENT_WIDTH + (2 * COMPONENT_FRAME));
-            int tempTop = COMPONENT_FRAME + (actualComponent.getCoordinates().getY() * (COMPONENT_HEIGHT + (0 * COMPONENT_FRAME))) - (COMPONENT_HEIGHT + (2 * COMPONENT_FRAME));
+            int tempTop =
+                    COMPONENT_FRAME
+                            + (actualComponent.getCoordinates().getY() * (COMPONENT_HEIGHT + (0 * COMPONENT_FRAME)))
+                            - (COMPONENT_HEIGHT + (2 * COMPONENT_FRAME));
 
             getChildAt(i).layout(
-                    tempLeft,
-                    tempTop,
-                    tempLeft + (COMPONENT_WIDTH + (2 * COMPONENT_FRAME)),
-                    tempTop + (COMPONENT_HEIGHT + (2 * COMPONENT_FRAME)));
+                    tempLeft - NODE_POINT_RADIUS,
+                    tempTop - NODE_POINT_RADIUS,
+                    tempLeft + (COMPONENT_WIDTH + (2 * COMPONENT_FRAME)) + NODE_POINT_RADIUS,
+                    tempTop + (COMPONENT_HEIGHT + (2 * COMPONENT_FRAME)) + NODE_POINT_RADIUS);
         }
     }
 
@@ -142,14 +139,21 @@ public class LayoutWiringDiagram extends ViewGroup implements AppConstants {
             if (v instanceof Component) {
                 ((Component) v).getCoordinates().addX();
 
-                int left = COMPONENT_FRAME + (((Component) v).getCoordinates().getX() * (COMPONENT_WIDTH + (0 * COMPONENT_FRAME))) - (COMPONENT_WIDTH + (2 * COMPONENT_FRAME));
-                int top = COMPONENT_FRAME + (((Component) v).getCoordinates().getY() * (COMPONENT_HEIGHT + (0 * COMPONENT_FRAME))) - (COMPONENT_HEIGHT + (2 * COMPONENT_FRAME));
+                int left =
+                        COMPONENT_FRAME
+                                + (((Component) v).getCoordinates().getX() * (COMPONENT_WIDTH + (0 * COMPONENT_FRAME)))
+                                - (COMPONENT_WIDTH + (2 * COMPONENT_FRAME));
+
+                int top =
+                        COMPONENT_FRAME
+                                + (((Component) v).getCoordinates().getY() * (COMPONENT_HEIGHT + (0 * COMPONENT_FRAME)))
+                                - (COMPONENT_HEIGHT + (2 * COMPONENT_FRAME));
 
                 getChildAt(i).layout(
-                        left,
-                        top,
-                        left + (COMPONENT_WIDTH + (2 * COMPONENT_FRAME)),
-                        top + (COMPONENT_HEIGHT + (2 * COMPONENT_FRAME)));
+                        left - NODE_POINT_RADIUS,
+                        top - NODE_POINT_RADIUS,
+                        left + (COMPONENT_WIDTH + (2 * COMPONENT_FRAME)) + NODE_POINT_RADIUS,
+                        top + (COMPONENT_HEIGHT + (2 * COMPONENT_FRAME)) + NODE_POINT_RADIUS);
             }
         }
     }
@@ -163,14 +167,21 @@ public class LayoutWiringDiagram extends ViewGroup implements AppConstants {
             if (v instanceof Component) {
                 ((Component) v).getCoordinates().addY();
 
-                int left = COMPONENT_FRAME + (((Component) v).getCoordinates().getX() * (COMPONENT_WIDTH + (0 * COMPONENT_FRAME))) - (COMPONENT_WIDTH + (2 * COMPONENT_FRAME));
-                int top = COMPONENT_FRAME + (((Component) v).getCoordinates().getY() * (COMPONENT_HEIGHT + (0 * COMPONENT_FRAME))) - (COMPONENT_HEIGHT + (2 * COMPONENT_FRAME));
+                int left =
+                        COMPONENT_FRAME
+                                + (((Component) v).getCoordinates().getX() * (COMPONENT_WIDTH + (0 * COMPONENT_FRAME)))
+                                - (COMPONENT_WIDTH + (2 * COMPONENT_FRAME));
+
+                int top =
+                        COMPONENT_FRAME
+                                + (((Component) v).getCoordinates().getY() * (COMPONENT_HEIGHT + (0 * COMPONENT_FRAME)))
+                                - (COMPONENT_HEIGHT + (2 * COMPONENT_FRAME));
 
                 getChildAt(i).layout(
-                        left,
-                        top,
-                        left + (COMPONENT_WIDTH + (2 * COMPONENT_FRAME)),
-                        top + (COMPONENT_HEIGHT + (2 * COMPONENT_FRAME)));
+                        left - NODE_POINT_RADIUS,
+                        top - NODE_POINT_RADIUS,
+                        left + (COMPONENT_WIDTH + (2 * COMPONENT_FRAME)) + NODE_POINT_RADIUS,
+                        top + (COMPONENT_HEIGHT + (2 * COMPONENT_FRAME)) + NODE_POINT_RADIUS);
             }
         }
     }

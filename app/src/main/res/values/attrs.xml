@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="Component">
-
         <attr name="cLabel" format="string" />
         <attr name="cDescription" format="string" />
 
@@ -27,14 +26,32 @@
         <attr name="cToRightOf" format="reference" />
         <attr name="cBelow" format="reference" />
         <attr name="cAbove" format="reference" />
-
     </declare-styleable>
 
-    <declare-styleable name="ComponentContact">
+    <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
+    <declare-styleable name="ComponentContact">
         <!--Popisy pinů u kontaktu-->
         <attr name="cContactLabel_1" format="string" />
         <attr name="cContactLabel_2" format="string" />
 
+        <!--Typ kontaktu-->
+        <attr name="cContactType" format="enum">
+            <enum name="NORMAL" value="1"/>
+            <enum name="IDLE" value="2"/>
+        </attr>
     </declare-styleable>
+
+    <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+
+    <declare-styleable name="ItemStatusDisplay">
+        <attr name="cActive" format="boolean" />
+        <attr name="cNumber" format="integer" />
+        <attr name="cText01" format="string" />
+        <attr name="cText02" format="string" />
+        <attr name="cText03" format="string" />
+    </declare-styleable>
+
+    <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+
 </resources>

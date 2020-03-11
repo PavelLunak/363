@@ -5,10 +5,12 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.PorterDuff;
 import android.os.Build;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 
 import com.lupa.a363.R;
@@ -122,7 +124,11 @@ public abstract class Component extends View implements AppConstants {
     }
 
     private void init() {
-        this.dimensions = new Dimensions(200, 200, 10);
+        this.dimensions = new Dimensions(
+                COMPONENT_WIDTH + (2 * (COMPONENT_FRAME + NODE_POINT_RADIUS)),
+                COMPONENT_HEIGHT + (2 * (COMPONENT_FRAME + NODE_POINT_RADIUS)),
+                COMPONENT_PADDING);
+
         setCoordinates(1,1);
     }
 
@@ -131,13 +137,14 @@ public abstract class Component extends View implements AppConstants {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 
         setMeasuredDimension(
-                COMPONENT_WIDTH + (2 * COMPONENT_FRAME),
-                COMPONENT_HEIGHT + (2 * COMPONENT_FRAME));
+                this.dimensions.getWidth(),
+                this.dimensions.getHeight());
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
-        drawFrame(canvas);
+        //canvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.OVERLAY);
+        //drawFrame(canvas);
     }
 
     private void drawFrame(Canvas canvas) {

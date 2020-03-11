@@ -12,10 +12,13 @@ import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
 
 import com.lupa.a363.R;
+import com.lupa.a363.utils.AppUtils;
 
 public class ComponentContact extends Component {
 
     Paint paint;
+
+    ContactType contactType;
 
     int blankPointX;
     int blankPointY;
@@ -55,8 +58,18 @@ public class ComponentContact extends Component {
         pinLabel01 = taComponentContact.getString(R.styleable.ComponentContact_cContactLabel_1);
         pinLabel02 = taComponentContact.getString(R.styleable.ComponentContact_cContactLabel_2);
 
+        int tempContactType = taComponentContact.getInt(R.styleable.ComponentContact_cContactType, 1);
+
         if (pinLabel01 == null) pinLabel01 = "";
         if (pinLabel02 == null) pinLabel02 = "";
+
+        switch (tempContactType) {
+            case 2:
+                contactType = ContactType.IDLE;
+                break;
+            default:
+                contactType = ContactType.NORMAL;
+        }
     }
 
     private void init() {
@@ -68,26 +81,49 @@ public class ComponentContact extends Component {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
+        switch (contactType) {
+            case NORMAL:
+                drawNormalContact(canvas);
+                break;
+            case IDLE:
+                drawIdleContact(canvas);
+                break;
+        }
+    }
+
+    private void drawNormalContact(Canvas canvas) {
         drawBlankPoint(canvas);
         drawContactLine(canvas);
         drawContactStart(canvas);
         drawContactEnd(canvas);
         drawPinLabel_01(canvas);
         drawPinLabel_02(canvas);
+        drawLabelText(canvas);
+    }
+
+    private void drawIdleContact(Canvas canvas) {
+        drawBlankPoint(canvas);
+        drawContactLine(canvas);
+        drawContactStart(canvas);
+        drawContactEnd(canvas);
+        drawIdleLine(canvas);
+        drawPinLabel_01(canvas);
+        drawPinLabel_02(canvas);
+        drawLabelText(canvas);
     }
 
     private void drawBlankPoint(Canvas canvas) {
         paint.setStyle(Paint.Style.STROKE);
-        paint.setStrokeWidth(2);
+        paint.setStrokeWidth(BLANK_POINT_LINE_WIDTH);
         paint.setColor(Color.BLACK);
 
         float scale = 0.7f;
 
         if (orientation == Orientation.VERTICAL) {
             blankPointX = ((COMPONENT_WIDTH + (2 * COMPONENT_FRAME)) / 2);
-            blankPointY = (int)((float) (COMPONENT_HEIGHT + (2 * COMPONENT_FRAME)) * scale) - COMPONENT_PADDING;
+            blankPointY = (int) ((float) (COMPONENT_HEIGHT + (2 * COMPONENT_FRAME)) * scale) - COMPONENT_PADDING;
         } else {
-            blankPointX = COMPONENT_PADDING + (int)((float) (COMPONENT_WIDTH + (2 * COMPONENT_FRAME)) * 0.3);
+            blankPointX = COMPONENT_PADDING + (int) ((float) (COMPONENT_WIDTH + (2 * COMPONENT_FRAME)) * 0.3);
             blankPointY = ((COMPONENT_WIDTH + (2 * COMPONENT_FRAME)) / 2);
         }
 
@@ -115,19 +151,21 @@ public class ComponentContact extends Component {
         paint.setStrokeWidth(CONDUCTOR_WIDTH);
         paint.setColor(Color.BLACK);
 
+        int overlap = (int) ((float)CONTACT_LENGTH * 0.1);
+
         if (orientation == Orientation.VERTICAL) {
             canvas.drawLine(
                     blankPointX,
                     blankPointY - BLANK_POINT_RADIUS,
                     blankPointX - CONTACT_OPENING_WIDTH,
-                    blankPointY - CONTACT_LENGTH,
+                    blankPointY - CONTACT_LENGTH - overlap,
                     paint
             );
         } else {
             canvas.drawLine(
                     blankPointX + BLANK_POINT_RADIUS,
                     blankPointY,
-                    blankPointX + CONTACT_LENGTH,
+                    blankPointX + CONTACT_LENGTH + overlap,
                     blankPointY - CONTACT_OPENING_WIDTH,
                     paint
             );
@@ -182,6 +220,32 @@ public class ComponentContact extends Component {
         }
     }
 
+    private void drawIdleLine(Canvas canvas) {
+        paint.setStyle(Paint.Style.STROKE);
+        paint.setStrokeWidth(CONDUCTOR_WIDTH);
+        paint.setColor(Color.BLACK);
+
+        int idleLineLength = (int) ((float)CONTACT_LENGTH * 0.25);
+
+        if (orientation == Orientation.VERTICAL) {
+            canvas.drawLine(
+                    blankPointX,
+                    blankPointY - CONTACT_LENGTH,
+                    blankPointX - idleLineLength,
+                    blankPointY - CONTACT_LENGTH,
+                    paint
+            );
+        } else {
+            canvas.drawLine(
+                    blankPointX + CONTACT_LENGTH,
+                    blankPointY,
+                    blankPointX + CONTACT_LENGTH,
+                    blankPointY - idleLineLength,
+                    paint
+            );
+        }
+    }
+
     private void drawPinLabel_01(Canvas canvas) {
         Paint paint = new Paint();
         paint.setTextSize(CONTACT_PIN_LABEL_SIZE);
@@ -203,6 +267,37 @@ public class ComponentContact extends Component {
             canvas.drawText(pinLabel02, blankPointX + BLANK_POINT_RADIUS + 2, blankPointY, paint);
         } else {
             canvas.drawText(pinLabel02, blankPointX, blankPointY + (2 * BLANK_POINT_RADIUS) + 5, paint);
+        }
+    }
+
+    private void drawLabelText(Canvas canvas) {
+        int textSize = (int)((float)COMPONENT_HEIGHT / 4 * 0.9);
+
+        Paint paint = new Paint();
+        paint.setTextSize(textSize);
+        paint.setAntiAlias(true);
+        paint.setTextAlign(Paint.Align.CENTER);
+
+        if (orientation == Orientation.VERTICAL) {
+            canvas.save();
+            canvas.rotate(
+                    270,
+                    ((2 * COMPONENT_FRAME) + COMPONENT_WIDTH + (2 * NODE_POINT_RADIUS)) / 2,
+                    ((2 * COMPONENT_FRAME) + COMPONENT_WIDTH + (2 * NODE_POINT_RADIUS)) / 2);
+
+            canvas.drawText(
+                    this.label,
+                    ((2 * COMPONENT_FRAME) + COMPONENT_WIDTH + (2 * NODE_POINT_RADIUS)) / 2,
+                    (((2 * COMPONENT_FRAME) + COMPONENT_WIDTH + (2 * NODE_POINT_RADIUS)) / 2) - (textSize),
+                    paint);
+
+            canvas.restore();
+        } else {
+            canvas.drawText(
+                    this.label,
+                    ((2 * COMPONENT_FRAME) + COMPONENT_WIDTH + (2 * NODE_POINT_RADIUS)) / 2,
+                    (((2 * COMPONENT_FRAME) + COMPONENT_WIDTH + (2 * NODE_POINT_RADIUS)) / 2) - (textSize),
+                    paint);
         }
     }
 }
