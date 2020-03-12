@@ -2,26 +2,43 @@ package com.lupa.a363.objects.views;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.RectF;
 import android.os.Build;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
+import android.util.Log;
+import android.util.TypedValue;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.lupa.a363.R;
+import com.lupa.a363.utils.AppConstants;
 
 
-public class ItemStatusDisplay extends LinearLayout {
+public class ItemStatusDisplay extends View {
 
-    View rootView;
-    View led;
-    TextView labelNumber, label01, label02, label03;
+    int width;
+    int height;
+
+    int ledWidth;
+    int textSize;
 
     boolean active;
     int number;
     String text01, text02, text03;
+
+    Paint paint;
+
+    int margin;
+    int ledX;
+    int ledY;
+
+    int lineSpace;
 
     public ItemStatusDisplay(Context context) {
         super(context);
@@ -67,23 +84,143 @@ public class ItemStatusDisplay extends LinearLayout {
     }
 
     private void init() {
-        rootView = inflate(getContext(), R.layout.status_display_item, this);
+        paint = new Paint();
+    }
 
-        led = rootView.findViewById(R.id.led);
-        labelNumber = rootView.findViewById(R.id.labelNumber);
-        label01 = rootView.findViewById(R.id.label01);
-        label02 = rootView.findViewById(R.id.label02);
-        label03 = rootView.findViewById(R.id.label03);
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 
-        if (active) {
-            led.setBackground(getResources().getDrawable(R.drawable.status_display_led_on));
+        //width = MeasureSpec.getSize(widthMeasureSpec) - getPaddingLeft() - getPaddingRight();
+        //height = (int) (width / ((float) 80 / (float) 130));
+
+        width = getMeasuredWidth();
+        height = (int) (width / ((float) 80 / (float) 130));
+
+        ledWidth = (int) ((float) width / 3);
+        textSize = (int) ((float) height / 8);
+        lineSpace = (int) ((float) textSize / 2);
+
+        setMeasuredDimension(width, height);
+    }
+
+    @Override
+    protected void onDraw(Canvas canvas) {
+        drawRectangle(canvas);
+        drawLed(canvas);
+        drawLabelText01(canvas);
+        drawLabelText02(canvas);
+        drawLabelText03(canvas);
+    }
+
+    private void drawRectangle(Canvas canvas) {
+        paint = new Paint();
+        paint.setStyle(Paint.Style.STROKE);
+        paint.setStrokeWidth(1);
+        paint.setColor(Color.BLACK);
+
+        margin = (int) ((float) width * 0.04);
+
+        canvas.drawRect(
+                margin,
+                margin,
+                width - margin,
+                height - margin,
+                paint);
+    }
+
+    private void drawLed(Canvas canvas) {
+        paint.setStyle(Paint.Style.FILL);
+        paint.setAntiAlias(true);
+
+        paint.setColor(Color.GRAY);
+        if (active) paint.setColor(Color.YELLOW);
+
+        ledX = width / 2;
+        ledY = margin + (int) ((float) ledWidth / 2);
+
+        //Výplň
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            canvas.drawOval(
+                    (int) (((float) width / 2) - ((float) ledWidth / 2)),
+                    margin + (int) ((float) height * 0.1),
+                    (int) (((float) width / 2) + ((float) ledWidth / 2)),
+                    margin + (int) ((float) height * 0.1) + ledWidth,
+                    paint);
         } else {
-            led.setBackground(getResources().getDrawable(R.drawable.status_display_led_off));
+            RectF rectF = new RectF(
+                    (int) (((float) width / 2) - ((float) ledWidth / 2)),
+                    margin + (int) ((float) ledWidth / 2),
+                    (int) (((float) width / 2) + ((float) ledWidth / 2)),
+                    margin + ledWidth);
+
+            canvas.drawOval(rectF, paint);
         }
 
-        labelNumber.setText("" + number);
-        label01.setText(text01 != null ? text01 : "");
-        label02.setText(text02 != null ? text02 : "");
-        label03.setText(text03 != null ? text03 : "");
+
+        //Obvod
+        paint.setStyle(Paint.Style.STROKE);
+        paint.setStrokeWidth(2);
+        paint.setColor(Color.BLACK);
+        paint.setAntiAlias(true);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            canvas.drawOval(
+                    (int) (((float) width / 2) - ((float) ledWidth / 2)),
+                    margin + (int) ((float) height * 0.1),
+                    (int) (((float) width / 2) + ((float) ledWidth / 2)),
+                    margin + (int) ((float) height * 0.1) + ledWidth,
+                    paint);
+        } else {
+            RectF rectF = new RectF(
+                    (int) (((float) width / 2) - ((float) ledWidth / 2)),
+                    margin + (int) ((float) ledWidth / 2),
+                    (int) (((float) width / 2) + ((float) ledWidth / 2)),
+                    margin + ledWidth);
+
+            canvas.drawOval(rectF, paint);
+        }
+    }
+
+    private void drawLabelText01(Canvas canvas) {
+        paint.setStyle(Paint.Style.FILL);
+        paint.setTextSize(textSize);
+        paint.setAntiAlias(true);
+        paint.setTextAlign(Paint.Align.CENTER);
+        paint.setColor(Color.BLACK);
+
+        canvas.drawText(
+                this.text01,
+                (int) (((float) width) / 2),
+                margin + (int) ((float) height * 0.1) + ledWidth + (int) ((float) height * 0.2),
+                paint);
+    }
+
+    private void drawLabelText02(Canvas canvas) {
+        paint.setStyle(Paint.Style.FILL);
+        paint.setTextSize(textSize);
+        paint.setAntiAlias(true);
+        paint.setTextAlign(Paint.Align.CENTER);
+        paint.setColor(Color.BLACK);
+
+        canvas.drawText(
+                this.text02,
+                (int) (((float) width) / 2),
+                margin + (int) ((float) height * 0.1) + ledWidth + (int) ((float) height * 0.2) + textSize + lineSpace,
+                paint);
+    }
+
+    private void drawLabelText03(Canvas canvas) {
+        paint.setStyle(Paint.Style.FILL);
+        paint.setTextSize(textSize);
+        paint.setAntiAlias(true);
+        paint.setTextAlign(Paint.Align.CENTER);
+        paint.setColor(Color.BLACK);
+
+        canvas.drawText(
+                this.text03,
+                (int) (((float) width) / 2),
+                margin + (int) ((float) height * 0.1) + ledWidth + (int) ((float) height * 0.2) + (2 * textSize) + (2 * lineSpace),
+                paint);
     }
 }
