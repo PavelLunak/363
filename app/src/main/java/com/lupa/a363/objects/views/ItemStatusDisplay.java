@@ -10,14 +10,9 @@ import android.os.Build;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
-import android.util.Log;
-import android.util.TypedValue;
 import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.lupa.a363.R;
-import com.lupa.a363.utils.AppConstants;
 
 
 public class ItemStatusDisplay extends View {
@@ -29,8 +24,10 @@ public class ItemStatusDisplay extends View {
     int textSize;
 
     boolean active;
-    int number;
-    String text01, text02, text03;
+    int number = 0;
+    String text01 = "";
+    String text02 = "";
+    String text03 = "";
 
     Paint paint;
 
@@ -81,6 +78,10 @@ public class ItemStatusDisplay extends View {
         } finally {
             ta.recycle();
         }
+
+        if (text01 == null) text01 = "";
+        if (text02 == null) text02 = "";
+        if (text03 == null) text03 = "";
     }
 
     private void init() {
@@ -108,6 +109,7 @@ public class ItemStatusDisplay extends View {
     protected void onDraw(Canvas canvas) {
         drawRectangle(canvas);
         drawLed(canvas);
+        drawNumber(canvas);
         drawLabelText01(canvas);
         drawLabelText02(canvas);
         drawLabelText03(canvas);
@@ -180,6 +182,28 @@ public class ItemStatusDisplay extends View {
 
             canvas.drawOval(rectF, paint);
         }
+    }
+
+    private void drawNumber(Canvas canvas) {
+        paint.setStyle(Paint.Style.FILL);
+        paint.setTextSize(textSize);
+        paint.setAntiAlias(true);
+        paint.setTextAlign(Paint.Align.CENTER);
+        paint.setColor(Color.BLACK);
+
+        if (!active) {
+            paint.setColor(Color.WHITE);
+        }
+
+        int yPos =
+                (int) ((margin + (int) ((float) height * 0.1) + (ledWidth / 2)
+                - ((paint.descent() + paint.ascent()) / 2)));
+
+        canvas.drawText(
+                "" + this.number,
+                (int) (((float) width) / 2),
+                yPos,
+                paint);
     }
 
     private void drawLabelText01(Canvas canvas) {

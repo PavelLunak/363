@@ -1,31 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    android:id="@+id/root"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
                 <TableLayout
-                    android:layout_width="match_parent" android:layout_height="match_parent">
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:weightSum="100">
+
+                        <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="10"
+                            app:cActive="true"
+                            app:cNumber="11"
+                            app:cText01="K138"
+                            app:cText02="K117">
+
+                        </com.lupa.a363.objects.views.ItemStatusDisplay>
+
+
+                        <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="10"
+                            app:cActive="true"
+                            app:cNumber="12"
+                            app:cText01="S125"
+                            app:cText02="S126">
+
+                        </com.lupa.a363.objects.views.ItemStatusDisplay>
+
+                        <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="10"
+                            app:cActive="true"
+                            app:cNumber="13"
+                            app:cText01="A102"
+                            app:cText02="N">
+
+                        </com.lupa.a363.objects.views.ItemStatusDisplay>
+
+                        <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="10"
+                            app:cActive="true"
+                            app:cNumber="14"
+                            app:cText01="H280"
+                            app:cText02="S502">
+
+                        </com.lupa.a363.objects.views.ItemStatusDisplay>
+
+                        <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="10"
+                            app:cActive="true"
+                            app:cNumber="15"
+                            app:cText01="Q06"
+                            app:cText02="H280">
+
+                        </com.lupa.a363.objects.views.ItemStatusDisplay>
+
+                        <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="10"
+                            app:cActive="true"
+                            app:cNumber="16"
+                            app:cText01="K117">
+
+                        </com.lupa.a363.objects.views.ItemStatusDisplay>
+
+                        <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="10"
+                            app:cActive="true"
+                            app:cNumber="17"
+                            app:cText01="S407">
+
+                        </com.lupa.a363.objects.views.ItemStatusDisplay>
+
+                        <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="10"
+                            app:cActive="true"
+                            app:cNumber="18"
+                            app:cText01="K141">
+
+                        </com.lupa.a363.objects.views.ItemStatusDisplay>
+
+                        <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="10"
+                            app:cActive="true"
+                            app:cNumber="19"
+                            app:cText01="K140">
+
+                        </com.lupa.a363.objects.views.ItemStatusDisplay>
+
+                        <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="10"
+                            app:cActive="true"
+                            app:cNumber="20"
+                            app:cText01="K116">
+
+                        </com.lupa.a363.objects.views.ItemStatusDisplay>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:weightSum="100">
+
+                        <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="10"
+                            app:cActive="false"
+                            app:cNumber="21"
+                            app:cText01="W">
+
+                        </com.lupa.a363.objects.views.ItemStatusDisplay>
+
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
                             android:layout_width="match_parent"
@@ -33,22 +159,7 @@
                             android:layout_weight="10"
                             app:cActive="true"
                             app:cNumber="22"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
-
-                        </com.lupa.a363.objects.views.ItemStatusDisplay>
-
-
-                        <com.lupa.a363.objects.views.ItemStatusDisplay
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="10"
-                            app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
+                            app:cText01="G">
 
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
@@ -57,10 +168,9 @@
                             android:layout_height="match_parent"
                             android:layout_weight="10"
                             app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
+                            app:cNumber="23"
+                            app:cText01="K36.A"
+                            app:cText02="S0">
 
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
@@ -69,10 +179,9 @@
                             android:layout_height="match_parent"
                             android:layout_weight="10"
                             app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
+                            app:cNumber="24"
+                            app:cText01="K36.L"
+                            app:cText02="S1">
 
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
@@ -80,11 +189,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
-                            app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
+                            app:cActive="false"
+                            app:cNumber="25"
+                            app:cText01="P">
 
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
@@ -92,11 +199,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
-                            app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
+                            app:cActive="false"
+                            app:cNumber="26"
+                            app:cText01="Z">
 
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
@@ -104,11 +209,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
-                            app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
+                            app:cActive="false"
+                            app:cNumber="27"
+                            app:cText01="Q13.A">
 
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
@@ -116,11 +219,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
-                            app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
+                            app:cActive="false"
+                            app:cNumber="28"
+                            app:cText01="Q14.A">
 
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
@@ -128,11 +229,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
-                            app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
+                            app:cActive="false"
+                            app:cNumber="29"
+                            app:cText01="Q13.B">
 
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
@@ -140,11 +239,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
-                            app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
+                            app:cActive="false"
+                            app:cNumber="30"
+                            app:cText01="Q14.B">
 
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
@@ -160,10 +257,9 @@
                             android:layout_height="match_parent"
                             android:layout_weight="10"
                             app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
+                            app:cNumber="31"
+                            app:cText01="Q13.L"
+                            app:cText02="D1">
 
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
@@ -173,10 +269,9 @@
                             android:layout_height="match_parent"
                             android:layout_weight="10"
                             app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
+                            app:cNumber="32"
+                            app:cText01="Q14.L"
+                            app:cText02="D1">
 
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
@@ -185,10 +280,9 @@
                             android:layout_height="match_parent"
                             android:layout_weight="10"
                             app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
+                            app:cNumber="33"
+                            app:cText01="Q13.L"
+                            app:cText02="R1">
 
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
@@ -197,10 +291,9 @@
                             android:layout_height="match_parent"
                             android:layout_weight="10"
                             app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
+                            app:cNumber="34"
+                            app:cText01="Q14.L"
+                            app:cText02="R1">
 
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
@@ -209,10 +302,9 @@
                             android:layout_height="match_parent"
                             android:layout_weight="10"
                             app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
+                            app:cNumber="35"
+                            app:cText01="Q11.B"
+                            app:cText02="Q11.C">
 
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
@@ -221,10 +313,33 @@
                             android:layout_height="match_parent"
                             android:layout_weight="10"
                             app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
+                            app:cNumber="36"
+                            app:cText01="Q12.B"
+                            app:cText02="Q12.C">
+
+                        </com.lupa.a363.objects.views.ItemStatusDisplay>
+
+                        <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="10"
+                            app:cActive="false"
+                            app:cNumber="37"
+                            app:cText01="Q11.L"
+                            app:cText02="Q13.L"
+                            app:cText03="B1">
+
+                        </com.lupa.a363.objects.views.ItemStatusDisplay>
+
+                        <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="10"
+                            app:cActive="false"
+                            app:cNumber="38"
+                            app:cText01="Q12.L"
+                            app:cText02="Q14.L"
+                            app:cText03="B1">
 
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
@@ -233,10 +348,9 @@
                             android:layout_height="match_parent"
                             android:layout_weight="10"
                             app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
+                            app:cNumber="39"
+                            app:cText01="1-2"
+                            app:cText02="XA">
 
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
@@ -245,34 +359,9 @@
                             android:layout_height="match_parent"
                             android:layout_weight="10"
                             app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
-
-                        </com.lupa.a363.objects.views.ItemStatusDisplay>
-
-                        <com.lupa.a363.objects.views.ItemStatusDisplay
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="10"
-                            app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
-
-                        </com.lupa.a363.objects.views.ItemStatusDisplay>
-
-                        <com.lupa.a363.objects.views.ItemStatusDisplay
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="10"
-                            app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
+                            app:cNumber="40"
+                            app:cText01="3-4"
+                            app:cText02="XB">
 
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
@@ -287,11 +376,10 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
-                            app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
+                            app:cActive="false"
+                            app:cNumber="41"
+                            app:cText01="K101"
+                            app:cText02="J0">
 
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
@@ -300,11 +388,21 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
-                            app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
+                            app:cActive="false"
+                            app:cNumber="42"
+                            app:cText01="Q11.A"
+                            app:cText02="J">
+
+                        </com.lupa.a363.objects.views.ItemStatusDisplay>
+
+                        <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="10"
+                            app:cActive="false"
+                            app:cNumber="43"
+                            app:cText01="Q12.A"
+                            app:cText02="J">
 
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
@@ -313,10 +411,10 @@
                             android:layout_height="match_parent"
                             android:layout_weight="10"
                             app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
+                            app:cNumber="44"
+                            app:cText01="Q11.L"
+                            app:cText02="Q13.L"
+                            app:cText03="J1">
 
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
@@ -325,10 +423,32 @@
                             android:layout_height="match_parent"
                             android:layout_weight="10"
                             app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
+                            app:cNumber="45"
+                            app:cText01="Q12.L"
+                            app:cText02="Q14.L"
+                            app:cText03="J1">
+
+                        </com.lupa.a363.objects.views.ItemStatusDisplay>
+
+                        <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="10"
+                            app:cActive="false"
+                            app:cNumber="46"
+                            app:cText01="K40.A"
+                            app:cText02="E0">
+
+                        </com.lupa.a363.objects.views.ItemStatusDisplay>
+
+                        <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="10"
+                            app:cActive="false"
+                            app:cNumber="47"
+                            app:cText01="K40.L"
+                            app:cText02="E1">
 
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
@@ -337,10 +457,8 @@
                             android:layout_height="match_parent"
                             android:layout_weight="10"
                             app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
+                            app:cNumber="48"
+                            app:cText01="K106">
 
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
@@ -348,11 +466,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
-                            app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
+                            app:cActive="false"
+                            app:cNumber="49"
+                            app:cText01="NR">
 
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
@@ -360,175 +476,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
-                            app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
-
-                        </com.lupa.a363.objects.views.ItemStatusDisplay>
-
-                        <com.lupa.a363.objects.views.ItemStatusDisplay
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="10"
-                            app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
-
-                        </com.lupa.a363.objects.views.ItemStatusDisplay>
-
-                        <com.lupa.a363.objects.views.ItemStatusDisplay
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="10"
-                            app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
-
-                        </com.lupa.a363.objects.views.ItemStatusDisplay>
-
-                        <com.lupa.a363.objects.views.ItemStatusDisplay
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="10"
-                            app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
-
-                        </com.lupa.a363.objects.views.ItemStatusDisplay>
-
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:weightSum="100">
-
-                        <com.lupa.a363.objects.views.ItemStatusDisplay
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="10"
-                            app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
-
-                        </com.lupa.a363.objects.views.ItemStatusDisplay>
-
-
-                        <com.lupa.a363.objects.views.ItemStatusDisplay
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="10"
-                            app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
-
-                        </com.lupa.a363.objects.views.ItemStatusDisplay>
-
-                        <com.lupa.a363.objects.views.ItemStatusDisplay
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="10"
-                            app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
-
-                        </com.lupa.a363.objects.views.ItemStatusDisplay>
-
-                        <com.lupa.a363.objects.views.ItemStatusDisplay
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="10"
-                            app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
-
-                        </com.lupa.a363.objects.views.ItemStatusDisplay>
-
-                        <com.lupa.a363.objects.views.ItemStatusDisplay
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="10"
-                            app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
-
-                        </com.lupa.a363.objects.views.ItemStatusDisplay>
-
-                        <com.lupa.a363.objects.views.ItemStatusDisplay
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="10"
-                            app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
-
-                        </com.lupa.a363.objects.views.ItemStatusDisplay>
-
-                        <com.lupa.a363.objects.views.ItemStatusDisplay
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="10"
-                            app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
-
-                        </com.lupa.a363.objects.views.ItemStatusDisplay>
-
-                        <com.lupa.a363.objects.views.ItemStatusDisplay
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="10"
-                            app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
-
-                        </com.lupa.a363.objects.views.ItemStatusDisplay>
-
-                        <com.lupa.a363.objects.views.ItemStatusDisplay
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="10"
-                            app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
-
-                        </com.lupa.a363.objects.views.ItemStatusDisplay>
-
-                        <com.lupa.a363.objects.views.ItemStatusDisplay
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="10"
-                            app:cActive="true"
-                            app:cNumber="11"
-                            app:cText01="AAA"
-                            app:cText02="BBB"
-                            app:cText03="CCC">
+                            app:cActive="false"
+                            app:cNumber="50"
+                            app:cText01="DR">
 
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
