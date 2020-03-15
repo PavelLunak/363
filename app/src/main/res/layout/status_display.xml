@@ -30,6 +30,7 @@
                         android:weightSum="100">
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint11"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -42,6 +43,7 @@
 
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint12"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -53,6 +55,7 @@
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint13"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -64,6 +67,7 @@
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint14"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -75,6 +79,7 @@
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint15"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -86,6 +91,7 @@
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint16"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -96,6 +102,7 @@
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint17"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -106,6 +113,7 @@
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint18"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -116,6 +124,7 @@
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint19"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -126,6 +135,7 @@
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint20"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -143,6 +153,7 @@
                         android:weightSum="100">
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint21"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -154,6 +165,7 @@
 
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint22"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -164,6 +176,7 @@
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint23"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -175,6 +188,7 @@
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint24"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -186,6 +200,7 @@
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint25"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -196,6 +211,7 @@
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint26"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -206,6 +222,7 @@
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint27"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -216,6 +233,7 @@
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint28"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -226,6 +244,7 @@
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint29"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -236,6 +255,7 @@
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint30"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -253,6 +273,7 @@
                         android:weightSum="100">
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint31"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -265,6 +286,7 @@
 
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint32"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -276,6 +298,7 @@
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint33"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -287,6 +310,7 @@
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint34"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -298,6 +322,7 @@
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint35"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -309,6 +334,7 @@
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint36"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -320,6 +346,7 @@
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint37"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -332,6 +359,7 @@
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint38"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -344,6 +372,7 @@
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint39"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -355,6 +384,7 @@
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint40"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -373,6 +403,7 @@
                         android:weightSum="100">
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint41"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -385,6 +416,7 @@
 
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint42"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -396,6 +428,7 @@
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint43"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -407,6 +440,7 @@
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint44"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -419,6 +453,7 @@
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint45"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -431,6 +466,7 @@
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint46"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -442,6 +478,7 @@
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint47"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -453,6 +490,7 @@
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint48"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -463,6 +501,7 @@
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint49"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -473,6 +512,7 @@
                         </com.lupa.a363.objects.views.ItemStatusDisplay>
 
                         <com.lupa.a363.objects.views.ItemStatusDisplay
+                            android:id="@+id/checkpoint50"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
@@ -485,6 +525,54 @@
                     </TableRow>
 
                 </TableLayout>
+
+                <RadioGroup
+                    android:id="@+id/rgOperatingStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioButton
+                        android:id="@+id/rbOperatingStatus01"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:text="Lokomotiva stojí, směr v nulové poloze, zapnut stejnosměrný hlavní vypínač, brzdové schéma, stav po zprovoznění lokomotivy" />
+
+                    <RadioButton
+                        android:id="@+id/rbOperatingStatus02"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#E9E9E9"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:text="Stav v jízdě, směr vpřed, 1. stanoviště, zapnut ss HV, lokomotiva v kladném tahu" />
+
+                    <RadioButton
+                        android:id="@+id/rbOperatingStatus03"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:text="Stav v jízdě, směr vpřed, 1. stanoviště, zapnut ss HV, lokomotiva ve výběhu, jízdní schéma" />
+
+                    <RadioButton
+                        android:id="@+id/rbOperatingStatus04"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#E9E9E9"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:text="Stav v brzdě, směr vpřed, 1. stanoviště, zapnut ss HV, lokomotiva v záporném tahu, kotevní proud vyšší než 100A" />
+
+                    <RadioButton
+                        android:id="@+id/rbOperatingStatus05"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:text="Stav v brzdě, směr vpřed, 1. stanoviště, zapnut ss HV, lokomotiva ve výběhu, brzdové schéma, kotevní proud brzdy nula" />
+                </RadioGroup>
 
             </LinearLayout>
 

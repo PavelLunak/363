@@ -171,6 +171,12 @@ public abstract class Component extends View implements AppConstants {
         this.coordinates = new Coordinates(x, y);
     }
 
+    public String getName() {
+        if (name != null) return name;
+        if (label != null) return label;
+        return "";
+    }
+
     //----------------------------------------------------------------------------------------------
 
     public boolean hasRelativePosition() {

@@ -37,6 +37,8 @@ public class ItemStatusDisplay extends View {
 
     int lineSpace;
 
+    boolean selected;
+
     public ItemStatusDisplay(Context context) {
         super(context);
         init();
@@ -91,9 +93,6 @@ public class ItemStatusDisplay extends View {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-
-        //width = MeasureSpec.getSize(widthMeasureSpec) - getPaddingLeft() - getPaddingRight();
-        //height = (int) (width / ((float) 80 / (float) 130));
 
         width = getMeasuredWidth();
         height = (int) (width / ((float) 80 / (float) 130));
@@ -246,5 +245,22 @@ public class ItemStatusDisplay extends View {
                 (int) (((float) width) / 2),
                 margin + (int) ((float) height * 0.1) + ledWidth + (int) ((float) height * 0.2) + (2 * textSize) + (2 * lineSpace),
                 paint);
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+        invalidate();
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setSelected(boolean selected) {
+        this.selected = selected;
+    }
+
+    public boolean isSelected() {
+        return selected;
     }
 }
