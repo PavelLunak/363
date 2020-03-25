@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="data_checkpoint_11">
+        <item>K138 - Elektronický časovač pro relé K 117 (20s)</item>
+        <item>K117 - Pomocné relé poruchy ventilace</item>
+    </string-array>
+
+    <string-array name="data_checkpoint_12">
+        <item>S111, S112 - přepínač režimu R-A-Z v poloze "R" nebo "A"</item>
+        <item>S123, S124 - tl. STOP</item>
+        <item>S101.A, S102.A - řízení</item>
+        <item>S125, S126 - spínač HV (~ nebo =)</item>
+    </string-array>
+
+    <string-array name="data_checkpoint_13">
+        <item>Klidový dotek relé K03 - izolační stav TM</item>
+        <item>Signál N z RT</item>
+        <item>N = X6.X7.X8.X9</item>
+        <item>- X6 : napájení RT v pořádku</item>
+        <item>- X7 : nesymetrie C05 menší než povolená</item>
+        <item>- X8 : napětí filtru pod 4,2 kV</item>
+        <item>- X9 : není zásah TOF</item>
+    </string-array>
+
+    <string-array name="data_checkpoint_14">
+        <item>K04.M - nadproud 1.MS (klidové doteky)</item>
+        <item>K05.M - nadproud 2.MS (klidové doteky)</item>
+        <item>26P - napětí sítě 48V alespoň 33V (skříň ochran)</item>
+        <item>S502 - tlak přístrojové jímky 4,3 - 8,0 bar</item>
+        <item>K03 - klidový dotek diferenciálního relé hl. tr. obvodů </item>
+        IV. - V. série)
+    </string-array>
+
+    <string-array name="data_checkpoint_15">
+        <item>S125, S126 - spínač HV (~ nebo =)</item>
+        <item>Q02.S - tlakový spínač ~ HV (spíná při 6,5 bar)</item>
+        <item>26P - napětí sítě 48V alespoň 33V (skříň ochran)</item>
+        <item>Q06.L - odpojovač systému</item>
+        <item>30P - =</item>
+        <item>28P - ~</item>
+    </string-array>
+
+</resources>

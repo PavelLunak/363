@@ -6,11 +6,12 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.os.Build;
-import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
 
 import com.lupa.a363.utils.AppUtils;
+
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 
 public class ComponentRelay extends Component {
     public ComponentRelay(Context context) {

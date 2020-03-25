@@ -2,13 +2,15 @@ package com.lupa.a363.utils;
 
 public interface AppConstants {
 
+    String FRAGMENT_STATUS_DISPLAY = "FragmentStatusDisplay";
+    String FRAGMENT_MAIN = "FragmentMain";
+    String FRAGMENT_ITEM_STATUS_DETAIL = "FragmentItemStatusDetail";
+
     enum ComponentType {
         CT_RELAY,
         CT_CONTACTOR,
         CT_SWITCH
     }
-
-    ;
 
     enum CircuitType {
         HIGH_VOLTAGE,

@@ -1,3 +1,112 @@
 <resources>
     <string name="app_name">363</string>
+
+    <string name="checkpoint_11_a">K138</string>
+    <string name="checkpoint_11_b">K117</string>
+
+    <string name="checkpoint_12_a">S125</string>
+    <string name="checkpoint_12_b">S126</string>
+
+    <string name="checkpoint_13_a">A102</string>
+    <string name="checkpoint_13_b">N</string>
+
+    <string name="checkpoint_14_a">H280</string>
+    <string name="checkpoint_14_b">S502</string>
+
+    <string name="checkpoint_15_a">Q06</string>
+    <string name="checkpoint_15_b">H280</string>
+
+    <string name="checkpoint_16_a">K117</string>
+
+    <string name="checkpoint_17_a">S407</string>
+
+    <string name="checkpoint_18_a">K141</string>
+
+    <string name="checkpoint_19_a">K140</string>
+
+    <string name="checkpoint_20_a">K116</string>
+
+    <string name="checkpoint_21_a">W</string>
+
+    <string name="checkpoint_22_a">G</string>
+
+    <string name="checkpoint_23_a">K36.A</string>
+    <string name="checkpoint_23_b">S0</string>
+
+    <string name="checkpoint_24_a">K36.L</string>
+    <string name="checkpoint_24_b">S1</string>
+
+    <string name="checkpoint_25_a">P</string>
+
+    <string name="checkpoint_26_a">Z</string>
+
+    <string name="checkpoint_27_a">Q13.A</string>
+
+    <string name="checkpoint_28_a">Q14.A</string>
+
+    <string name="checkpoint_29_a">Q13.B</string>
+
+    <string name="checkpoint_30_a">Q14.B</string>
+
+    <string name="checkpoint_31_a">Q13.L</string>
+    <string name="checkpoint_31_b">D1</string>
+
+    <string name="checkpoint_32_a">Q14.L</string>
+    <string name="checkpoint_32_b">D1</string>
+
+    <string name="checkpoint_33_a">Q13.L</string>
+    <string name="checkpoint_33_b">R1</string>
+
+    <string name="checkpoint_34_a">Q14.L</string>
+    <string name="checkpoint_34_b">R1</string>
+
+    <string name="checkpoint_35_a">Q11.B</string>
+    <string name="checkpoint_35_b">Q11.C</string>
+
+    <string name="checkpoint_36_a">Q12.B</string>
+    <string name="checkpoint_36_b">Q12.C</string>
+
+    <string name="checkpoint_37_a">Q11.L</string>
+    <string name="checkpoint_37_b">Q13.L</string>
+    <string name="checkpoint_37_c">B1</string>
+
+    <string name="checkpoint_38_a">Q12.L</string>
+    <string name="checkpoint_38_b">Q14.L</string>
+    <string name="checkpoint_38_c">B1</string>
+
+    <string name="checkpoint_39_a">1-2</string>
+    <string name="checkpoint_39_b">XA</string>
+
+    <string name="checkpoint_40_a">1-2</string>
+    <string name="checkpoint_40_b">XB</string>
+
+    <string name="checkpoint_41_a">K101</string>
+    <string name="checkpoint_41_b">JO</string>
+
+    <string name="checkpoint_42_a">Q11.A</string>
+    <string name="checkpoint_42_b">J</string>
+
+    <string name="checkpoint_43_a">Q12.A</string>
+    <string name="checkpoint_43_b">J</string>
+
+    <string name="checkpoint_44_a">Q11.L</string>
+    <string name="checkpoint_44_b">Q13.L</string>
+    <string name="checkpoint_44_c">J1</string>
+
+    <string name="checkpoint_45_a">Q12.L</string>
+    <string name="checkpoint_45_b">Q14.L</string>
+    <string name="checkpoint_45_c">J1</string>
+
+    <string name="checkpoint_46_a">K40.A</string>
+    <string name="checkpoint_46_b">E0</string>
+
+    <string name="checkpoint_47_a">K40.L</string>
+    <string name="checkpoint_47_b">E1</string>
+
+    <string name="checkpoint_48_a">K106</string>
+
+    <string name="checkpoint_49_a">NR</string>
+
+    <string name="checkpoint_50_a">DR</string>
+
 </resources>

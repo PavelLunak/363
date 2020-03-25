@@ -5,18 +5,17 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.PorterDuff;
 import android.os.Build;
-import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 
 import com.lupa.a363.R;
 import com.lupa.a363.objects.Coordinates;
 import com.lupa.a363.objects.Dimensions;
 import com.lupa.a363.utils.AppConstants;
+
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 
 public abstract class Component extends View implements AppConstants {
 

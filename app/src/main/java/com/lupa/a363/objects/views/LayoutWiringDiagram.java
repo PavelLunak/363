@@ -2,7 +2,6 @@ package com.lupa.a363.objects.views;
 
 import android.content.Context;
 import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
@@ -10,6 +9,8 @@ import android.view.ViewGroup;
 
 import com.lupa.a363.objects.Coordinates;
 import com.lupa.a363.utils.AppConstants;
+
+import androidx.annotation.RequiresApi;
 
 public class LayoutWiringDiagram extends ViewGroup implements AppConstants {
 
@@ -36,15 +37,24 @@ public class LayoutWiringDiagram extends ViewGroup implements AppConstants {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 
         int childCount = getChildCount();
+        int maxX = 0;
+        int maxY = 0;
 
-        int specWidth = MeasureSpec.makeMeasureSpec(COMPONENT_WIDTH + (2 * COMPONENT_FRAME), MeasureSpec.EXACTLY);
-        int specHeight = MeasureSpec.makeMeasureSpec(COMPONENT_HEIGHT + (2 * COMPONENT_FRAME), MeasureSpec.EXACTLY);
+        Component component;
 
         for (int i = 0; i < childCount; i ++) {
-            measureChild(getChildAt(i), specWidth, specHeight);
+            component = ((Component) getChildAt(i));
+
+            if (component.getCoordinates().getX() > maxX) maxX = component.getCoordinates().getX();
+            if (component.getCoordinates().getY() > maxY) maxY = component.getCoordinates().getY();
         }
 
-        setMeasuredDimension(getMeasuredWidth(), getMeasuredHeight());
+        Log.i("bcwcbwe", "maxX: " + maxX);
+        Log.i("bcwcbwe", "maxY: " + maxY);
+
+        setMeasuredDimension(
+                maxX * (COMPONENT_WIDTH - (2 * COMPONENT_FRAME)),
+                maxX * (COMPONENT_HEIGHT - (2 * COMPONENT_FRAME)));
     }
     */
 

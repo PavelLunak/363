@@ -7,12 +7,13 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.os.Build;
-import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
 import android.view.View;
 
 import com.lupa.a363.R;
+
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 
 
 public class ItemStatusDisplay extends View {
@@ -116,9 +117,11 @@ public class ItemStatusDisplay extends View {
 
     private void drawRectangle(Canvas canvas) {
         paint = new Paint();
-        paint.setStyle(Paint.Style.STROKE);
+        paint.setStyle(Paint.Style.FILL_AND_STROKE);
         paint.setStrokeWidth(1);
-        paint.setColor(Color.BLACK);
+        paint.setColor(getContext().getResources().getColor(R.color.colorItemStatusBgInactive));
+
+        if (active) paint.setColor(getContext().getResources().getColor(R.color.colorItemStatusBgActive));
 
         margin = (int) ((float) width * 0.04);
 
@@ -247,6 +250,11 @@ public class ItemStatusDisplay extends View {
                 paint);
     }
 
+    public void updateBackgroundByActive() {
+        if (active) setBackgroundColor(getContext().getResources().getColor(R.color.colorItemStatusBgActive));
+        else setBackgroundColor(getContext().getResources().getColor(R.color.colorItemStatusBgInactive));
+    }
+
     public void setActive(boolean active) {
         this.active = active;
         invalidate();
@@ -254,6 +262,38 @@ public class ItemStatusDisplay extends View {
 
     public int getNumber() {
         return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    public String getText01() {
+        return text01;
+    }
+
+    public void setText01(String text01) {
+        this.text01 = text01;
+    }
+
+    public String getText02() {
+        return text02;
+    }
+
+    public void setText02(String text02) {
+        this.text02 = text02;
+    }
+
+    public String getText03() {
+        return text03;
+    }
+
+    public void setText03(String text03) {
+        this.text03 = text03;
+    }
+
+    public boolean isActive() {
+        return active;
     }
 
     public void setSelected(boolean selected) {
