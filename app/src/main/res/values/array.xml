@@ -1,43 +1,212 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <string name="test"><![CDATA[<font color="blue"><b>K138</b></font> - Elektronický časovač pro relé K117 (20s)]]></string>
+
     <string-array name="data_checkpoint_11">
-        <item>K138 - Elektronický časovač pro relé K 117 (20s)</item>
-        <item>K117 - Pomocné relé poruchy ventilace</item>
+        <item><![CDATA[<font color="black"><b>Kontrola napětí na cívce časového relé K117</b></font>]]></item>
+        <item><![CDATA[<br><font color="blue"><b>K138</b></font> - Elektronický časovač pro relé K117 (20s)]]></item>
+        <item><![CDATA[<font color="blue"><b>K117</b></font> - Pomocné relé poruchy ventilace]]></item>
     </string-array>
 
     <string-array name="data_checkpoint_12">
-        <item>S111, S112 - přepínač režimu R-A-Z v poloze "R" nebo "A"</item>
-        <item>S123, S124 - tl. STOP</item>
-        <item>S101.A, S102.A - řízení</item>
-        <item>S125, S126 - spínač HV (~ nebo =)</item>
+        <item><![CDATA[<font color="blue"><b>S111</b></font>, <font color="blue"><b>S112</b></font> - přepínač režimu R-A-Z v poloze "R" nebo "A"]]></item>
+        <item><![CDATA[<font color="blue"><b>S123</b></font>, <font color="blue"><b>S124</b></font> - tl. STOP]]></item>
+        <item><![CDATA[<font color="blue"><b>S101.A</b></font>, <font color="blue"><b>S102.A</b></font> - řízení]]></item>
+        <item><![CDATA[<font color="blue"><b>S125</b></font>, <font color="blue"><b>S126</b></font> - spínač HV (~ nebo =)]]></item>
     </string-array>
 
     <string-array name="data_checkpoint_13">
-        <item>Klidový dotek relé K03 - izolační stav TM</item>
-        <item>Signál N z RT</item>
-        <item>N = X6.X7.X8.X9</item>
-        <item>- X6 : napájení RT v pořádku</item>
-        <item>- X7 : nesymetrie C05 menší než povolená</item>
-        <item>- X8 : napětí filtru pod 4,2 kV</item>
-        <item>- X9 : není zásah TOF</item>
+        <item><![CDATA[Klidový dotek relé <font color="blue"><b>K03</b></font> - izolační stav TM]]></item>
+        <item><![CDATA[Signál <font color="blue"><b>N</b></font> z RT]]></item>
+        <item><![CDATA[<br><b><u>N = X6.X7.X8.X9</u></b>]]></item>
+        <item><![CDATA[- <i>X6 : napájení RT v pořádku</i>]]></item>
+        <item><![CDATA[- <i>X7 : nesymetrie C05 menší než povolená</i>]]></item>
+        <item><![CDATA[- <i>X8 : napětí filtru pod 4,2 kV</i>]]></item>
+        <item><![CDATA[- <i>X9 : není zásah TOF</i>]]></item>
     </string-array>
 
     <string-array name="data_checkpoint_14">
-        <item>K04.M - nadproud 1.MS (klidové doteky)</item>
-        <item>K05.M - nadproud 2.MS (klidové doteky)</item>
-        <item>26P - napětí sítě 48V alespoň 33V (skříň ochran)</item>
-        <item>S502 - tlak přístrojové jímky 4,3 - 8,0 bar</item>
-        <item>K03 - klidový dotek diferenciálního relé hl. tr. obvodů </item>
-        IV. - V. série)
+        <item><![CDATA[<font color="blue"><b>K04.M</b></font> - nadproud 1.MS (klidové doteky)]]></item>
+        <item><![CDATA[<font color="blue"><b>K05.M</b></font> - nadproud 2.MS (klidové doteky)]]></item>
+        <item><![CDATA[<font color="blue"><b>26P</b></font> - napětí sítě 48V alespoň 33V (skříň ochran)]]></item>
+        <item><![CDATA[<font color="blue"><b>S502</b></font> - tlak přístrojové jímky 4,3 - 8,0 bar]]></item>
+        <item><![CDATA[<font color="blue"><b>K03</b></font> - klidový dotek diferenciálního relé hl. tr. obvodů IV. - V. série)]]></item>
     </string-array>
 
     <string-array name="data_checkpoint_15">
-        <item>S125, S126 - spínač HV (~ nebo =)</item>
-        <item>Q02.S - tlakový spínač ~ HV (spíná při 6,5 bar)</item>
-        <item>26P - napětí sítě 48V alespoň 33V (skříň ochran)</item>
-        <item>Q06.L - odpojovač systému</item>
-        <item>30P - =</item>
-        <item>28P - ~</item>
+        <item><![CDATA[<font color="black"><b>Kontrola navolení systému dle indikace</b></font>]]></item>
+        <item><![CDATA[<br><font color="blue"><b>S125</b></font>, <font color="blue"><b>S126</b></font> - spínač HV (~ nebo =)]]></item>
+        <item><![CDATA[<font color="blue"><b>Q02.S</b></font> - tlakový spínač ~ HV (spíná při 6,5 bar)]]></item>
+        <item><![CDATA[<font color="blue"><b>26P</b></font> - napětí sítě 48V alespoň 33V (skříň ochran)]]></item>
+        <item><![CDATA[<font color="blue"><b>Q06.L</b></font> - odpojovač systému]]></item>
+        <item><![CDATA[<font color="blue"><b>30P</b></font> - =]]></item>
+        <item><![CDATA[<font color="blue"><b>28P</b></font> - ~]]></item>
+    </string-array>
+
+    <string-array name="data_checkpoint_16">
+        <item><![CDATA[<font color="black"><u><b>Při stání kontrola</b></u></font>]]></item>
+        <item><![CDATA[<font color="blue"><b>K104</b></font> - klidový kontakt pomocného relé vyrovnávání nápravových tlaků (směr VPŘED)]]></item>
+        <item><![CDATA[<font color="blue"><b>K105</b></font> - klidový kontakt pomocného relé vyrovnávání nápravových tlaků (směr VZAD)]]></item>
+        <item><![CDATA[<font color="blue"><b>K107</b></font> - klidový kontakt vzniku brzdového proudu kotev]]></item>
+
+        <item><![CDATA[<br><font color="black"><u><b>Při brzdě kontrola</b></u></font>]]></item>
+        <item><![CDATA[<font color="blue"><b>S401</b></font> - koncový spínač žaluzíí brzdových odporníků]]></item>
+        <item><![CDATA[<font color="blue"><b>Q11</b></font>, <font color="blue"><b>Q12</b></font> - poloha přepojovačů J-B-D]]></item>
+
+        <item><![CDATA[<br><font color="black"><u><b>Při jízdě kontrola</b></u></font>]]></item>
+        <item><![CDATA[<font color="blue"><b>S401</b></font> - koncový spínač žaluzíí brzdových odporníků]]></item>
+        <item><![CDATA[<font color="blue"><b>Q11, Q12</b></font> - poloha přepojovačů J-B-D]]></item>
+
+        <item><![CDATA[<br>Ve všech režimech je kontrolováno časové relé <font color="blue"><b>K117</b></font> (časové relé poruchy ventilace - 20s)]]></item>
+    </string-array>
+
+    <string-array name="data_checkpoint_17">
+        <item><![CDATA[<font color="blue"><b>T01.N</b></font> - 1. stupeň Buchholzova relé]]></item>
+        <item><![CDATA[<font color="blue"><b>K21.M</b></font> - klidové doteky skluzového relé]]></item>
+        <item><![CDATA[<font color="blue"><b>K22.M</b></font> - klidové doteky skluzového relé]]></item>
+        <item><![CDATA[<font color="blue"><b>K37.L</b></font> - zkratování filtru]]></item>
+        <item><![CDATA[<font color="blue"><b>S407</b></font> - koncové kontakty krytů trafa]]></item>
+    </string-array>
+
+    <string-array name="data_checkpoint_18">
+        <item><![CDATA[<font color="black"><b>Blokování strojovny</b></font>]]></item>
+        <item><![CDATA[<br><font color="blue"><b>K141</b></font> - blokování strojovny]]></item>
+        <item><![CDATA[<font color="blue"><b>K169</b></font> - spínač diagnostiky v poloze <b>D</b>]]></item>
+    </string-array>
+
+    <string-array name="data_checkpoint_19">
+        <item><![CDATA[<font color="black"><b>Zapínací relé hlavního vypínače</b></font>]]></item>
+        <item><![CDATA[<br><font color="blue"><b>K140</b></font> - zapínací relé HV]]></item>
+    </string-array>
+
+    <string-array name="data_checkpoint_20">
+        <item><![CDATA[<font color="black"><b>Stykač pomocných pohonů</b></font>]]></item>
+        <item><![CDATA[<br><font color="black"><u><b>II. - III. série</b></u></font>]]></item>
+        <item><![CDATA[<font color="blue"><b>K116</b></font> - stykač pomocných pohonů (kontakty A1-A2)]]></item>
+        <item><![CDATA[- musí být zvednutý sběrač]]></item>
+        <item><![CDATA[- musí být zapnutý některý HV]]></item>
+        <item><![CDATA[- napětí v troleji musí být v mezích]]></item>
+
+        <item><![CDATA[<br><font color="black"><u><b>IV. - V. série</b></u></font>]]></item>
+        <item><![CDATA[<font color="blue"><b>S101.A</b></font>, <font color="blue"><b>S102.A</b></font> - řízení]]></item>
+        <item><![CDATA[<font color="blue"><b>S121</b></font>, <font color="blue"><b>S122</b></font> - spínače sběračů]]></item>
+        <item><![CDATA[<font color="blue"><b>K02</b></font> - klidový kontakt napěťového relé]]></item>
+        <item><![CDATA[<font color="blue"><b>H280</b></font> - relé <b>8P</b> - časové relé podpěťové ochrany]]></item>
+        <item><![CDATA[<font color="blue"><b>Q01</b></font>, <font color="blue"><b>Q02</b></font> - sepnutí HV]]></item>
+        <item><![CDATA[<font color="blue"><b>K116</b></font> - sepnutí klidového kontaktu stykače pomocných pohonů]]></item>
+
+        <item><![CDATA[<br><font color="red">Po rekonstrukci zapojeno jako u II. - III. série</font>]]></item>
+    </string-array>
+
+    <string-array name="data_checkpoint_21">
+        <item><![CDATA[<font color="black"><b>Kontrola signálu W na vstupu do regulátoru tahu</b></font>]]></item>
+        <item><![CDATA[<br><font color="blue"><b>Q02</b></font> - střídavý HV musí být sepnut (kontakty 9-29)]]></item>
+    </string-array>
+
+    <string-array name="data_checkpoint_22">
+        <item><![CDATA[<font color="black"><b>Kontrola signálu G na vstupu do regulátoru tahu</b></font>]]></item>
+        <item><![CDATA[<br><font color="blue"><b>Q01</b></font> - stejnosměrný HV musí být sepnut]]></item>
+    </string-array>
+
+    <string-array name="data_checkpoint_23">
+        <item><![CDATA[<font color="black"><b>Kontrola napětí před cívkou stykače K36</b></font>]]></item>
+        <item><![CDATA[<br><font color="blue"><b>S101.A</b></font>, <font color="blue"><b>S102.A</b></font> - řízení]]></item>
+        <item><![CDATA[<font color="blue"><b>K102</b></font> - pomocné relé stykače <b>K36</b> (musí být sepnuto pro získání signálu <b>S0</b>)]]></item>
+        <item><![CDATA[- musí být sepnut stykač pomocných pohonů <b>K116</b>]]></item>
+        <item><![CDATA[- regulátor tahu musí vydat signál <b>S0</b> (podmínka sepnutí relé <b>K102</b>)]]></item>
+    </string-array>
+
+    <string-array name="data_checkpoint_24">
+        <item><![CDATA[<font color="black"><b>Kontrola signálu S1 na vstupu do regulátoru tahu (signál informující o sepnutí stykače K36)</b></font>]]></item>
+        <item><![CDATA[<br><font color="blue"><b>S101.B</b></font>, <font color="blue"><b>S102.B</b></font> - řízení]]></item>
+        <item><![CDATA[<font color="blue"><b>K36.L</b></font> - pomocný kontakt stykače vyzkratování nabíjecího odporníku hlavního filtru]]></item>
+    </string-array>
+
+    <string-array name="data_checkpoint_25">
+        <item><![CDATA[<font color="black"><b>Kontrola signálu P (požadavek jízdy VPŘED)</b></font>]]></item>
+        <item><![CDATA[<br><font color="blue"><b>S101.A</b></font>, <font color="blue"><b>S102.A</b></font> - řízení]]></item>
+        <item><![CDATA[<font color="blue"><b>V104</b></font>, <font color="blue"><b>V105</b></font> - diody]]></item>
+        <item><![CDATA[<font color="blue"><b>S103.A</b></font>, <font color="blue"><b>S104.A</b></font> - směrový kontrolér]]></item>
+    </string-array>
+
+    <string-array name="data_checkpoint_26">
+        <item><![CDATA[<font color="black"><b>Kontrola signálu R (požadavek jízdy VZAD)</b></font>]]></item>
+        <item><![CDATA[<br><font color="blue"><b>S101.A</b></font>, <font color="blue"><b>S102.A</b></font> - řízení]]></item>
+        <item><![CDATA[<font color="blue"><b>V104</b></font>, <font color="blue"><b>V105</b></font> - diody]]></item>
+        <item><![CDATA[<font color="blue"><b>S103.A</b></font>, <font color="blue"><b>S104.A</b></font> - směrový kontrolér]]></item>
+    </string-array>
+
+    <string-array name="data_checkpoint_27">
+        <item><![CDATA[<font color="black"><b>Kontrola napětí před cívkou EPV Q13.A (1.MS VPŘED)</b></font>]]></item>
+        <item><![CDATA[<br><font color="blue"><b>S101.B</b></font>, <font color="blue"><b>S102.B</b></font> - řízení]]></item>
+        <item><![CDATA[<font color="blue"><b>K106</b></font> - pomocné relé odpojení TM]]></item>
+        <item><![CDATA[<font color="blue"><b>K110</b></font> - klidový kontakt pomocného stykače ventilů pohonů <b>Q11</b> - <b>Q14</b>]]></item>
+        <item><![CDATA[<font color="blue"><b>K108</b></font> - pomocné relé směrových přepínačů - směr <b>P</b>]]></item>
+        <item><![CDATA[<font color="blue"><b>S197</b></font> - spínač odpojení TM - 1. stanoviště]]></item>
+        <item><![CDATA[<font color="blue"><b>S198</b></font> - spínač odpojení TM - 2. stanoviště]]></item>
+        <item><![CDATA[<font color="blue"><b>S101.A</b></font>, <font color="blue"><b>S102.A</b></font> - řízení]]></item>
+
+        <item><![CDATA[<br>- lok nesmí být být ani v tahu ani v brzdě]]></item>
+        <item><![CDATA[- regulátor tahu vydal signál <b>DO</b> (podmínka sepnutí <b>K108</b>)]]></item>
+        <item><![CDATA[- z ovládaného stanoviště není vyřazena 1. motorová skupina]]></item>
+    </string-array>
+
+    <string-array name="data_checkpoint_28">
+        <item><![CDATA[<font color="black"><b>Kontrola napětí před cívkou EPV Q14.A (2.MS VPŘED)</b></font>]]></item>
+        <item><![CDATA[<br><font color="blue"><b>S101.B</b></font>, <font color="blue"><b>S102.B</b></font> - řízení]]></item>
+        <item><![CDATA[<font color="blue"><b>K106</b></font> - pomocné relé odpojení TM]]></item>
+        <item><![CDATA[<font color="blue"><b>K110</b></font> - klidový kontakt pomocného stykače ventilů pohonů <b>Q11</b> - <b>Q14</b>]]></item>
+        <item><![CDATA[<font color="blue"><b>K108</b></font> - pomocné relé směrových přepínačů - směr <b>P</b>]]></item>
+        <item><![CDATA[<font color="blue"><b>S197</b></font> - spínač odpojení TM - 1. stanoviště]]></item>
+        <item><![CDATA[<font color="blue"><b>S198</b></font> - spínač odpojení TM - 2. stanoviště]]></item>
+        <item><![CDATA[<font color="blue"><b>S101.A</b></font>, <font color="blue"><b>S102.A</b></font> - řízení]]></item>
+
+        <item><![CDATA[<br>- lok nesmí být být ani v tahu ani v brzdě]]></item>
+        <item><![CDATA[- regulátor tahu vydal signál <b>DO</b> (podmínka sepnutí <b>K108</b>)]]></item>
+        <item><![CDATA[- z ovládaného stanoviště není vyřazena 2. motorová skupina]]></item>
+    </string-array>
+
+    <string-array name="data_checkpoint_29">
+        <item><![CDATA[<font color="black"><b>Kontrola napětí před cívkou EPV Q13.B (1.MS VZAD)</b></font>]]></item>
+        <item><![CDATA[<br><font color="blue"><b>S101.B</b></font>, <font color="blue"><b>S102.B</b></font> - řízení]]></item>
+        <item><![CDATA[<font color="blue"><b>K106</b></font> - pomocné relé odpojení TM]]></item>
+        <item><![CDATA[<font color="blue"><b>K110</b></font> - klidový kontakt pomocného stykače ventilů pohonů <b>Q11</b> - <b>Q14</b>]]></item>
+        <item><![CDATA[<font color="blue"><b>K109</b></font> - pomocné relé směrových přepínačů - směr <b>Z</b>]]></item>
+        <item><![CDATA[<font color="blue"><b>S197</b></font> - spínač odpojení TM - 1. stanoviště]]></item>
+        <item><![CDATA[<font color="blue"><b>S198</b></font> - spínač odpojení TM - 2. stanoviště]]></item>
+        <item><![CDATA[<font color="blue"><b>S101.A</b></font>, <font color="blue"><b>S102.A</b></font> - řízení]]></item>
+
+        <item><![CDATA[<br>- lok nesmí být být ani v tahu ani v brzdě]]></item>
+        <item><![CDATA[- regulátor tahu vydal signál <b>RO</b> (podmínka sepnutí <b>K109</b>)]]></item>
+        <item><![CDATA[- z ovládaného stanoviště není vyřazena 2. motorová skupina]]></item>
+        <item><![CDATA[- je navolen libovolný směr (odpad <b>K110</b>)]]></item>
+
+        <item><![CDATA[<br><b>SOUČASNĚ MUSÍ SVÍTIT KONTROLNÍ BOD 27</b>]]></item>
+    </string-array>
+
+    <string-array name="data_checkpoint_30">
+        <item><![CDATA[<font color="black"><b>Kontrola napětí před cívkou EPV Q14.B (2.MS VZAD)</b></font>]]></item>
+        <item><![CDATA[<br><font color="blue"><b>S101.B</b></font>, <font color="blue"><b>S102.B</b></font> - řízení]]></item>
+        <item><![CDATA[<font color="blue"><b>K106</b></font> - pomocné relé odpojení TM]]></item>
+        <item><![CDATA[<font color="blue"><b>K110</b></font> - klidový kontakt pomocného stykače ventilů pohonů <b>Q11</b> - <b>Q14</b>]]></item>
+        <item><![CDATA[<font color="blue"><b>K109</b></font> - pomocné relé směrových přepínačů - směr <b>P</b>]]></item>
+        <item><![CDATA[<font color="blue"><b>S197</b></font> - spínač odpojení TM - 1. stanoviště]]></item>
+        <item><![CDATA[<font color="blue"><b>S198</b></font> - spínač odpojení TM - 2. stanoviště]]></item>
+        <item><![CDATA[<font color="blue"><b>S101.A</b></font>, <font color="blue"><b>S102.A</b></font> - řízení]]></item>
+
+        <item><![CDATA[<br>- lok nesmí být být ani v tahu ani v brzdě]]></item>
+        <item><![CDATA[- regulátor tahu vydal signál <b>RO</b> (podmínka sepnutí <b>K108</b>)]]></item>
+        <item><![CDATA[- z ovládaného stanoviště není vyřazena 2. motorová skupina]]></item>
+        <item><![CDATA[- je navolen libovolný směr (odpad <b>K110</b>)]]></item>
+
+        <item><![CDATA[<br><b>SOUČASNĚ MUSÍ SVÍTIT KONTROLNÍ BOD 28</b>]]></item>
+    </string-array>
+
+    <string-array name="data_checkpoint_31">
+        <item><![CDATA[<font color="black"><b>Kontrola signálu D1 na vstupu do regulátoru tahu (signál o přestavení Q13 a Q14 do směru VPŘED)</b></font>]]></item>
+        <item><![CDATA[<br><font color="blue"><b>S101.B</b></font>, <font color="blue"><b>S102.B</b></font> - řízení]]></item>
+        <item><![CDATA[<font color="blue"><b>Q13</b></font> - směr <b>P</b> nebo <b>0</b> (kontakty 15-16)]]></item>
     </string-array>
 
 </resources>

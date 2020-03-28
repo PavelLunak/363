@@ -36,6 +36,39 @@ public class AppUtils {
                 return context.getResources().getStringArray(R.array.data_checkpoint_14);
             case 15:
                 return context.getResources().getStringArray(R.array.data_checkpoint_15);
+            case 16:
+                return context.getResources().getStringArray(R.array.data_checkpoint_16);
+            case 17:
+                return context.getResources().getStringArray(R.array.data_checkpoint_17);
+            case 18:
+                return context.getResources().getStringArray(R.array.data_checkpoint_18);
+            case 19:
+                return context.getResources().getStringArray(R.array.data_checkpoint_19);
+            case 20:
+                return context.getResources().getStringArray(R.array.data_checkpoint_20);
+            case 21:
+                return context.getResources().getStringArray(R.array.data_checkpoint_21);
+            case 22:
+                return context.getResources().getStringArray(R.array.data_checkpoint_22);
+            case 23:
+                return context.getResources().getStringArray(R.array.data_checkpoint_23);
+            case 24:
+                return context.getResources().getStringArray(R.array.data_checkpoint_24);
+            case 25:
+                return context.getResources().getStringArray(R.array.data_checkpoint_25);
+            case 26:
+                return context.getResources().getStringArray(R.array.data_checkpoint_26);
+            case 27:
+                return context.getResources().getStringArray(R.array.data_checkpoint_27);
+            case 28:
+                return context.getResources().getStringArray(R.array.data_checkpoint_28);
+            case 29:
+                return context.getResources().getStringArray(R.array.data_checkpoint_29);
+            case 30:
+                return context.getResources().getStringArray(R.array.data_checkpoint_30);
+            case 31:
+                return context.getResources().getStringArray(R.array.data_checkpoint_31);
+
         }
 
         return null;

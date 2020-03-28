@@ -117,11 +117,25 @@ public class ItemStatusDisplay extends View {
 
     private void drawRectangle(Canvas canvas) {
         paint = new Paint();
-        paint.setStyle(Paint.Style.FILL_AND_STROKE);
+        paint.setStyle(Paint.Style.FILL);
         paint.setStrokeWidth(1);
         paint.setColor(getContext().getResources().getColor(R.color.colorItemStatusBgInactive));
 
         if (active) paint.setColor(getContext().getResources().getColor(R.color.colorItemStatusBgActive));
+
+        margin = (int) ((float) width * 0.04);
+
+        canvas.drawRect(
+                margin,
+                margin,
+                width - margin,
+                height - margin,
+                paint);
+
+        paint = new Paint();
+        paint.setStyle(Paint.Style.STROKE);
+        paint.setStrokeWidth(2);
+        paint.setColor(Color.BLACK);
 
         margin = (int) ((float) width * 0.04);
 

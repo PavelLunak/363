@@ -3,6 +3,7 @@ package com.lupa.a363.fragments;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,9 +13,6 @@ import com.lupa.a363.MainActivity;
 import com.lupa.a363.R;
 import com.lupa.a363.objects.views.ItemStatusDisplay;
 import com.lupa.a363.utils.AppUtils;
-
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -58,6 +56,10 @@ public class FragmentItemStatusDetail extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        itemStatusDisplay.setText01("");
+        itemStatusDisplay.setText02("");
+        itemStatusDisplay.setText03("");
+
         if (data != null) {
             strings = data.getStringArray("strings");
             number = data.getInt("number");
@@ -72,13 +74,14 @@ public class FragmentItemStatusDetail extends Fragment {
                 for (int i = 0; i < strings.length; i++) {
                     sb.append(strings[i]);
 
-                    if (i < (strings.length - 1))
-                        sb.append("\n\n");
+                    if (i < (strings.length - 1)) {
+                        sb.append("<br>");
+                    }
                 }
             }
         }
 
-        labelText01.setText(sb.toString());
+        labelText01.setText(Html.fromHtml(sb.toString()));
 
         itemStatusDisplay.setActive(active);
         itemStatusDisplay.setNumber(number);
