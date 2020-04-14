@@ -1,12 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string-array name="series">
+        <item>I. série</item>
+        <item>II. série</item>
+        <item>III. série</item>
+        <item>IV. série</item>
+        <item>V. série</item>
+    </string-array>
+
     <string name="test"><![CDATA[<font color="blue"><b>K138</b></font> - Elektronický časovač pro relé K117 (20s)]]></string>
 
-    <string-array name="data_checkpoint_11">
+    <string-array name="data_checkpoint_11_s23">
+        <item>2,3</item>
         <item><![CDATA[<font color="black"><b>Kontrola napětí na cívce časového relé K117</b></font>]]></item>
-        <item><![CDATA[<br><font color="blue"><b>K138</b></font> - Elektronický časovač pro relé K117 (20s)]]></item>
-        <item><![CDATA[<font color="blue"><b>K117</b></font> - Pomocné relé poruchy ventilace]]></item>
+        <item><![CDATA[<br><font color="blue"><b>K132</b></font> - Klidové kontakty poruchy UNIPULSu]]></item>
+        <item><![CDATA[<br><font color="blue"><b>K119</b></font> - Klidové kontakty pomocného relé signalizace poruchy ventilátoru 1]]></item>
+        <item><![CDATA[<br><font color="blue"><b>K120</b></font> - Klidové kontakty pomocného relé signalizace poruchy ventilátoru 2]]></item>
+        <item><![CDATA[<br><font color="blue"><b>K128</b></font> - Klidové kontakty pomocného relé signalizace poruchy kompresoru 1]]></item>
+        <item><![CDATA[<br><font color="blue"><b>K129</b></font> - Klidové kontakty pomocného relé signalizace poruchy kompresoru 2]]></item>
+        <item><![CDATA[<br><font color="blue"><b>F106</b></font> - Jistič chlazení skříně elektroniky]]></item>
+        <item><![CDATA[<br><font color="blue"><b>600V</b></font> - Napětí mezifiltru musí být 420V - 600V]]></item>
+        <item><![CDATA[<br><font color="blue"><b>R1 - R4</b></font> - Signály R1 - R4 v regulátoru sekundárních PM nesmí chybět déle než 20s]]></item>
+        <item>4,5</item>
+    </string-array>
+
+    <string-array name="data_checkpoint_11_s45">
+        <item>2,3</item>
+        <item><![CDATA[<font color="black"><b>Kontrola napětí před cívkou relé K138, které uzavírá zemní větev relé K117</b></font>]]></item>
+        <item><![CDATA[<br><font color="blue"><b>K132</b></font> - Klidové kontakty poruchy UNIPULSu]]></item>
+        <item><![CDATA[<br><font color="blue"><b>K119</b></font> - Klidové kontakty pomocného relé signalizace poruchy ventilátoru 1]]></item>
+        <item><![CDATA[<br><font color="blue"><b>K120</b></font> - Klidové kontakty pomocného relé signalizace poruchy ventilátoru 2]]></item>
+        <item><![CDATA[<br><font color="blue"><b>K128</b></font> - Klidové kontakty pomocného relé signalizace poruchy kompresoru 1]]></item>
+        <item><![CDATA[<br><font color="blue"><b>K129</b></font> - Klidové kontakty pomocného relé signalizace poruchy kompresoru 2]]></item>
+        <item><![CDATA[<br><font color="blue"><b>F106</b></font> - Jistič chlazení skříně elektroniky]]></item>
+        <item><![CDATA[<br><font color="blue"><b>600V</b></font> - Napětí mezifiltru musí být 420V - 600V]]></item>
     </string-array>
 
     <string-array name="data_checkpoint_12">

@@ -8,7 +8,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:padding="5dp">
 
         <com.lupa.a363.objects.views.ItemStatusDisplay
@@ -29,7 +29,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="vertical" >
 
                 <TextView
@@ -39,7 +39,87 @@
                     android:padding="5dp"
                     android:text="K138 - Elektronický časovač pro relé K 117 (20s)"
                     android:textSize="18sp" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+
+                        <com.lupa.a363.objects.views.LayoutWiringDiagram
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#E8FAFF">
+
+                            <!--
+                            <com.lupa.a363.objects.views.ComponentContact
+                                android:id="@+id/component_02"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:cContactLabel_1="11"
+                                app:cContactLabel_2="22"
+                                app:cContactType="NORMAL"
+                                app:cDirection="NONE"
+                                app:cLabel="K129"
+                                app:cOrientation="VERTICAL" />
+
+                            <com.lupa.a363.objects.views.ComponentContact
+                                android:id="@+id/component_07"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:cAbove="@+id/component_02"
+                                app:cContactLabel_1="11"
+                                app:cContactLabel_2="22"
+                                app:cContactType="BREAKER"
+                                app:cDirection="NONE"
+                                app:cLabel="F106"
+                                app:cOrientation="VERTICAL" />
+
+                            <com.lupa.a363.objects.views.Conductor
+                                android:id="@+id/component_08"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:cAbove="@+id/component_07"
+                                app:ccStart="BOTTOM"
+                                app:ccStop="RIGHT"/>
+
+                            <com.lupa.a363.objects.views.Conductor
+                                android:id="@+id/component_09"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:cToRightOf="@+id/component_08"
+                                app:ccStart="LEFT"
+                                app:ccStop="BOTTOM"/>
+
+                            <com.lupa.a363.objects.views.Conductor
+                                android:id="@+id/component_10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:cBelow="@+id/component_09"
+                                app:ccStart="TOP"
+                                app:ccStop="RIGHT"/>
+                             -->
+
+                            <com.lupa.a363.objects.views.Conductor
+                                android:id="@+id/component_10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:cCreateEndNode="false"
+                                app:cCreateStartNode="false"
+                                app:ccStart="RIGHT"
+                                app:ccStop="TOP" />
+
+                        </com.lupa.a363.objects.views.LayoutWiringDiagram>
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
             </LinearLayout>
+
         </ScrollView>
 
     </RelativeLayout>

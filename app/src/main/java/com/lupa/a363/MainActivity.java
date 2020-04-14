@@ -6,13 +6,17 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.lupa.a363.fragments.FragmentItemStatusDetail;
 import com.lupa.a363.fragments.FragmentMain;
 import com.lupa.a363.fragments.FragmentStatusDisplay;
+import com.lupa.a363.objects.dialogs.DialogSelectSeries;
 import com.lupa.a363.objects.views.ItemStatusDisplay;
 import com.lupa.a363.utils.AppConstants;
 import com.lupa.a363.utils.AppUtils;
+import com.lupa.a363.utils.PrefsUtils;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
@@ -23,7 +27,8 @@ public class MainActivity extends AppCompatActivity implements
         FragmentManager.OnBackStackChangedListener,
         AppConstants {
 
-    Button btnStatusDisplay;
+    TextView footerLabelSeries;
+    RelativeLayout layoutFooter;
 
     int animShowFragment = R.anim.anim_fragment_show;
     int animHideFragment = R.anim.anim_fragment_hide;
@@ -35,16 +40,42 @@ public class MainActivity extends AppCompatActivity implements
     FragmentItemStatusDetail fragmentItemStatusDetail;
 
     boolean isSavedInstanceState;
+    int series;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        layoutFooter = findViewById(R.id.layoutFooter);
+        footerLabelSeries = findViewById(R.id.footerLabelSeries);
+        ;
+
+        layoutFooter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogSelectSeries.createDialog(MainActivity.this)
+                        .setListener(new DialogSelectSeries.OnSeriesSelectedListener() {
+                            @Override
+                            public void onSeriesSelected(int series) {
+                                setSeries(series);
+                            }
+                        }).show();
+            }
+        });
+
         fragmentManager = getSupportFragmentManager();
         fragmentManager.addOnBackStackChangedListener(this);
 
         if (savedInstanceState == null) {
+            this.series = PrefsUtils.getSeries(this);
+
+            footerLabelSeries.setText(
+                    AppUtils.seriesToRomanNumerals(this.series) +
+                            ". série (" +
+                            AppUtils.getSeriesRangeBySeries(this, this.series) +
+                            ")");
+
             showFragmentMain();
         } else {
             isSavedInstanceState = true;
@@ -78,24 +109,24 @@ public class MainActivity extends AppCompatActivity implements
     public boolean onTouch(View view, MotionEvent motionEvent) {
         int action = motionEvent.getAction();
 
-        switch(action) {
-            case (MotionEvent.ACTION_DOWN) :
-                Log.i("vasavsav","Action was DOWN");
+        switch (action) {
+            case (MotionEvent.ACTION_DOWN):
+                Log.i("vasavsav", "Action was DOWN");
                 return true;
-            case (MotionEvent.ACTION_MOVE) :
-                Log.i("vasavsav","Action was MOVE");
+            case (MotionEvent.ACTION_MOVE):
+                Log.i("vasavsav", "Action was MOVE");
                 return true;
-            case (MotionEvent.ACTION_UP) :
-                Log.i("vasavsav","Action was UP");
+            case (MotionEvent.ACTION_UP):
+                Log.i("vasavsav", "Action was UP");
                 return true;
-            case (MotionEvent.ACTION_CANCEL) :
-                Log.i("vasavsav","Action was CANCEL");
+            case (MotionEvent.ACTION_CANCEL):
+                Log.i("vasavsav", "Action was CANCEL");
                 return true;
-            case (MotionEvent.ACTION_OUTSIDE) :
-                Log.i("vasavsav","Movement occurred outside bounds " +
+            case (MotionEvent.ACTION_OUTSIDE):
+                Log.i("vasavsav", "Movement occurred outside bounds " +
                         "of current screen element");
                 return true;
-            default :
+            default:
                 return true;
         }
     }
@@ -161,5 +192,20 @@ public class MainActivity extends AppCompatActivity implements
 
     public boolean isSavedInstanceState() {
         return isSavedInstanceState;
+    }
+
+    public int getSeries() {
+        return series;
+    }
+
+    public void setSeries(int series) {
+        this.series = series;
+        PrefsUtils.updateSeries(this, this.series);
+        if (footerLabelSeries != null)
+            footerLabelSeries.setText(
+                    AppUtils.seriesToRomanNumerals(this.series) +
+                            ". série (" +
+                            AppUtils.getSeriesRangeBySeries(this, this.series) +
+                            ")");
     }
 }

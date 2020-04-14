@@ -5,17 +5,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <RelativeLayout
+        android:id="@+id/layoutFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_layout_footer"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/footerLabelSeries"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="TextView"
+            android:textColor="@color/text_footer_series" />
+    </RelativeLayout>
+
     <com.lupa.a363.objects.views.LayoutWiringDiagram
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_above="@id/layoutFooter"
         android:background="#E8FAFF">
 
-        <com.lupa.a363.objects.views.ComponentRelay
-            android:id="@+id/component_01"
+        <com.lupa.a363.objects.views.ComponentContact
+            android:id="@+id/component_05"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:cBelow="@+id/component_03"
+            app:cContactLabel_1="11"
+            app:cContactLabel_2="22"
+            app:cContactType="IDLE"
             app:cDirection="NONE"
-            app:cLabel="K36"
+            app:cLabel="S102.A"
             app:cOrientation="VERTICAL" />
 
         <com.lupa.a363.objects.views.ComponentRelay
@@ -45,16 +67,12 @@
             app:cLabel="K04"
             app:cOrientation="VERTICAL" />
 
-        <com.lupa.a363.objects.views.ComponentContact
-            android:id="@+id/component_05"
+        <com.lupa.a363.objects.views.ComponentRelay
+            android:id="@+id/component_01"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:cBelow="@+id/component_03"
-            app:cContactLabel_1="11"
-            app:cContactLabel_2="22"
-            app:cContactType="IDLE"
             app:cDirection="NONE"
-            app:cLabel="S102.A"
+            app:cLabel="K36"
             app:cOrientation="VERTICAL" />
 
     </com.lupa.a363.objects.views.LayoutWiringDiagram>
@@ -62,7 +80,8 @@
     <FrameLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_above="@id/layoutFooter">
 
     </FrameLayout>
 

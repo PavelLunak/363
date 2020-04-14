@@ -5,6 +5,7 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Rect;
 import android.graphics.RectF;
 import android.os.Build;
 import android.util.AttributeSet;
@@ -67,6 +68,9 @@ public class ComponentContact extends Component {
             case 2:
                 contactType = ContactType.IDLE;
                 break;
+            case 3:
+                contactType = ContactType.BREAKER;
+                break;
             default:
                 contactType = ContactType.NORMAL;
         }
@@ -88,6 +92,9 @@ public class ComponentContact extends Component {
             case IDLE:
                 drawIdleContact(canvas);
                 break;
+            case BREAKER:
+                drawBreaker(canvas);
+                break;
         }
     }
 
@@ -107,6 +114,17 @@ public class ComponentContact extends Component {
         drawContactStart(canvas);
         drawContactEnd(canvas);
         drawIdleLine(canvas);
+        drawPinLabel_01(canvas);
+        drawPinLabel_02(canvas);
+        drawLabelText(canvas);
+    }
+
+    private void drawBreaker(Canvas canvas) {
+        drawBlankPoint(canvas);
+        drawContactLine(canvas);
+        drawBreakerRect(canvas);
+        drawContactStart(canvas);
+        drawContactEnd(canvas);
         drawPinLabel_01(canvas);
         drawPinLabel_02(canvas);
         drawLabelText(canvas);
@@ -170,6 +188,50 @@ public class ComponentContact extends Component {
                     paint
             );
         }
+    }
+
+    private void drawBreakerRect(Canvas canvas) {
+        paint.setStyle(Paint.Style.FILL);
+        paint.setColor(Color.BLACK);
+
+        int overlap = (int) ((float)CONTACT_LENGTH * 0.1);
+
+        double length = Math.sqrt(Math.pow(CONTACT_OPENING_WIDTH, 2) + Math.pow(CONTACT_LENGTH - overlap, 2));
+        double angle = -1 * (180 * ((Math.pow(Math.cos((CONTACT_LENGTH - overlap) / length), -1)) / Math.PI));
+        int pivotX;
+        int pivotY;
+        int rectWidth = (int) (CONTACT_LENGTH * SCALE_BREAKER_RECT_WIDTH);
+        int rectHeight = (int) (rectWidth * SCALE_BREAKER_RECT_HEIGHT);
+        Rect rect;
+
+        canvas.save();
+
+        if (orientation == Orientation.VERTICAL) {
+            pivotX = (int) (blankPointX - CONTACT_OPENING_WIDTH);
+            pivotY = (int) (blankPointY - CONTACT_LENGTH - overlap);
+
+            canvas.rotate((float) angle + 90, pivotX, pivotY);
+
+            rect = new Rect(
+                    pivotX - rectHeight,
+                    pivotY  + overlap,
+                    pivotX,
+                    pivotY + rectWidth);
+        } else {
+            pivotX = (int) (blankPointX + CONTACT_LENGTH + overlap);
+            pivotY = (int) (blankPointY - CONTACT_OPENING_WIDTH);
+
+            canvas.rotate((float) angle + 90, pivotX, pivotY);
+
+            rect = new Rect(
+                    pivotX - rectWidth,
+                    pivotY  - rectHeight,
+                    pivotX - overlap,
+                    pivotY);
+        }
+
+        canvas.drawRect(rect, paint);
+        canvas.restore();
     }
 
     private void drawContactStart(Canvas canvas) {

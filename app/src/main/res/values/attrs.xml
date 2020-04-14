@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <declare-styleable name="Conductor">
+        <!--Popisy pinů u kontaktu-->
+        <attr name="ccConductorLabel" format="string" />
+        <attr name="ccDescription" format="string" />
+
+        <!--Směr připojení k sousednímu elementu-->
+        <attr name="ccToLeftOf" format="reference" />
+        <attr name="ccToRightOf" format="reference" />
+        <attr name="ccBelow" format="reference" />
+        <attr name="ccAbove" format="reference" />
+
+        <!--Start vodiče-->
+        <attr name="ccStart" format="enum">
+            <enum name="LEFT" value="1"/>
+            <enum name="TOP" value="2"/>
+            <enum name="RIGHT" value="3"/>
+            <enum name="BOTTOM" value="4"/>
+        </attr>
+
+        <!--Konec vodiče-->
+        <attr name="ccStop" format="enum">
+            <enum name="LEFT" value="1"/>
+            <enum name="TOP" value="2"/>
+            <enum name="RIGHT" value="3"/>
+            <enum name="BOTTOM" value="4"/>
+        </attr>
+    </declare-styleable>
+
     <declare-styleable name="Component">
         <attr name="cLabel" format="string" />
         <attr name="cDescription" format="string" />
@@ -26,6 +54,9 @@
         <attr name="cToRightOf" format="reference" />
         <attr name="cBelow" format="reference" />
         <attr name="cAbove" format="reference" />
+
+        <attr name="cCreateStartNode" format="boolean" />
+        <attr name="cCreateEndNode" format="boolean" />
     </declare-styleable>
 
     <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
@@ -39,6 +70,7 @@
         <attr name="cContactType" format="enum">
             <enum name="NORMAL" value="1"/>
             <enum name="IDLE" value="2"/>
+            <enum name="BREAKER" value="3"/>
         </attr>
     </declare-styleable>
 

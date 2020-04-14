@@ -1,6 +1,22 @@
 <resources>
     <string name="app_name">363</string>
 
+    <string name="yes">Ano</string>
+    <string name="no">Ne</string>
+    <string name="close">Zavřít</string>
+
+    <string name="series_1">I. série</string>
+    <string name="series_2">II. série</string>
+    <string name="series_3">III. série</string>
+    <string name="series_4">IV. série</string>
+    <string name="series_5">V. série</string>
+
+    <string name="series_1_range">003 - 012</string>
+    <string name="series_2_range">013 - 042</string>
+    <string name="series_3_range">043 - 082</string>
+    <string name="series_4_range">083 - 147</string>
+    <string name="series_5_range">148 - 181</string>
+
     <string name="checkpoint_11_a">K138</string>
     <string name="checkpoint_11_b">K117</string>
 

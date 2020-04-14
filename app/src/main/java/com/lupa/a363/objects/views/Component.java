@@ -37,6 +37,9 @@ public abstract class Component extends View implements AppConstants {
     int below;
     int above;
 
+    boolean createStartNode;
+    boolean createEndNode;
+
 
     public Component(Context context) {
         super(context);
@@ -78,6 +81,9 @@ public abstract class Component extends View implements AppConstants {
             toRightOf = ta.getResourceId(R.styleable.Component_cToRightOf, 0);
             below = ta.getResourceId(R.styleable.Component_cBelow, 0);
             above = ta.getResourceId(R.styleable.Component_cAbove, 0);
+
+            createStartNode = ta.getBoolean(R.styleable.Component_cCreateStartNode, false);
+            createEndNode = ta.getBoolean(R.styleable.Component_cCreateEndNode, false);
 
             int tempDirection = ta.getInt(R.styleable.Component_cDirection, 1);
             int tempOrientation = ta.getInt(R.styleable.Component_cOrientation, 1);
@@ -143,7 +149,9 @@ public abstract class Component extends View implements AppConstants {
     @Override
     protected void onDraw(Canvas canvas) {
         //canvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.OVERLAY);
-        //drawFrame(canvas);
+        drawFrame(canvas);
+        //drawDistrict(canvas);
+        //drawDistrictWithoutNode(canvas);
     }
 
     private void drawFrame(Canvas canvas) {
@@ -157,6 +165,34 @@ public abstract class Component extends View implements AppConstants {
                 COMPONENT_FRAME,
                 COMPONENT_WIDTH + COMPONENT_FRAME,
                 COMPONENT_HEIGHT + COMPONENT_FRAME,
+                paint);
+    }
+
+    private void drawDistrict(Canvas canvas) {
+        Paint paint = new Paint();
+        paint.setStyle(Paint.Style.STROKE);
+        paint.setStrokeWidth(4);
+        paint.setColor(Color.RED);
+
+        canvas.drawRect(
+                0,
+                0,
+                this.dimensions.getWidth(),
+                this.dimensions.getHeight(),
+                paint);
+    }
+
+    private void drawDistrictWithoutNode(Canvas canvas) {
+        Paint paint = new Paint();
+        paint.setStyle(Paint.Style.STROKE);
+        paint.setStrokeWidth(4);
+        paint.setColor(Color.GREEN);
+
+        canvas.drawRect(
+                NODE_POINT_RADIUS,
+                NODE_POINT_RADIUS,
+                this.dimensions.getWidth() - NODE_POINT_RADIUS,
+                this.dimensions.getHeight() - NODE_POINT_RADIUS,
                 paint);
     }
 

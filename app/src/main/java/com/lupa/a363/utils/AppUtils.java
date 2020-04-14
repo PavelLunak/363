@@ -2,13 +2,14 @@ package com.lupa.a363.utils;
 
 import android.content.Context;
 
+import com.lupa.a363.MainActivity;
 import com.lupa.a363.R;
 
 import java.lang.reflect.Array;
 
 import androidx.fragment.app.FragmentManager;
 
-public class AppUtils {
+public class AppUtils implements AppConstants {
 
     public static boolean isFragmentCurrent(String name, FragmentManager fragmentManager) {
         if (fragmentManager.getBackStackEntryCount() != 0) {
@@ -27,7 +28,10 @@ public class AppUtils {
 
         switch (number) {
             case 11:
-                return context.getResources().getStringArray(R.array.data_checkpoint_11);
+                if (((MainActivity) context).getSeries() == AppConstants.SERIES_2 || ((MainActivity) context).getSeries() == AppConstants.SERIES_3)
+                    return context.getResources().getStringArray(R.array.data_checkpoint_11_s23);
+                else if (((MainActivity) context).getSeries() == AppConstants.SERIES_4 || ((MainActivity) context).getSeries() == AppConstants.SERIES_5)
+                    return context.getResources().getStringArray(R.array.data_checkpoint_11_s45);
             case 12:
                 return context.getResources().getStringArray(R.array.data_checkpoint_12);
             case 13:
@@ -270,5 +274,39 @@ public class AppUtils {
         }
 
         return labels;
+    }
+
+    public static String seriesToRomanNumerals(int series) {
+        switch (series) {
+            case 1:
+                return "I";
+            case 2:
+                return "II";
+            case 3:
+                return "III";
+            case 4:
+                return "IV";
+            case 5:
+                return "V";
+        }
+
+        return "";
+    }
+
+    public static String getSeriesRangeBySeries(Context context, int series) {
+        switch (series) {
+            case SERIES_1:
+                return context.getResources().getString(R.string.series_1_range);
+            case SERIES_2:
+                return context.getResources().getString(R.string.series_2_range);
+            case SERIES_3:
+                return context.getResources().getString(R.string.series_3_range);
+            case SERIES_4:
+                return context.getResources().getString(R.string.series_4_range);
+            case SERIES_5:
+                return context.getResources().getString(R.string.series_5_range);
+        }
+
+        return "";
     }
 }

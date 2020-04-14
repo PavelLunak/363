@@ -6,4 +6,14 @@
 
     <color name="colorItemStatusBgActive">#73D81B</color>
     <color name="colorItemStatusBgInactive">#E1E1E1</color>
+
+    <color name="bg_layout_footer">#000000</color>
+    <color name="bg_dialog_header">#2196F3</color>
+    <color name="bg_dialog_button">#2196F3</color>
+    <color name="bg_dialog_button_stroke">#000000</color>
+    <color name="bg_divider">#C0C0C0</color>
+
+    <color name="text_dialog_header">#FFFFFF</color>
+    <color name="text_dialog_button">#FFFFFF</color>
+    <color name="text_footer_series">#FFFFFF</color>
 </resources>

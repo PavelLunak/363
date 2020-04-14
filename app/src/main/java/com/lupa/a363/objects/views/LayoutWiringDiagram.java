@@ -31,7 +31,6 @@ public class LayoutWiringDiagram extends ViewGroup implements AppConstants {
         super(context, attrs, defStyleAttr, defStyleRes);
     }
 
-    /*
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
@@ -49,14 +48,24 @@ public class LayoutWiringDiagram extends ViewGroup implements AppConstants {
             if (component.getCoordinates().getY() > maxY) maxY = component.getCoordinates().getY();
         }
 
-        Log.i("bcwcbwe", "maxX: " + maxX);
-        Log.i("bcwcbwe", "maxY: " + maxY);
+        Log.i("bcwcbwe", "---------------------------------");
+        //Log.i("bcwcbwe", "maxX: " + maxX);
+        //Log.i("bcwcbwe", "maxY: " + maxY);
+        //Log.i("bcwcbwe", "COMPONENT_WIDTH: " + COMPONENT_WIDTH);
+        //Log.i("bcwcbwe", "COMPONENT_HEIGHT: " + COMPONENT_HEIGHT);
 
-        setMeasuredDimension(
-                maxX * (COMPONENT_WIDTH - (2 * COMPONENT_FRAME)),
-                maxX * (COMPONENT_HEIGHT - (2 * COMPONENT_FRAME)));
+        int width = maxX * COMPONENT_WIDTH;
+        int height = maxY * COMPONENT_HEIGHT;
+
+        Log.i("bcwcbwe", "width: " + width);
+        Log.i("bcwcbwe", "height: " + height);
+        Log.i("bcwcbwe", "getMeasuredWidth(): " + getMeasuredWidth());
+        Log.i("bcwcbwe", "getMeasuredHeight(): " + getMeasuredHeight());
+
+        //setMeasuredDimension(width, height);
+        setMeasuredDimension(1000, 2500);
+        //setMeasuredDimension(getMeasuredWidth(), getMeasuredHeight());
     }
-    */
 
     @Override
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
@@ -72,9 +81,13 @@ public class LayoutWiringDiagram extends ViewGroup implements AppConstants {
             if (!actualComponent.hasRelativePosition()) {
                 actualComponent.setCoordinates(1, 1);
             } else {
+                //Objekt, na který se actualComponent odkazuje ve své poloze
                 Component referenceObject;
+
+                //Souřadnice objektu, na který se actualComponent odkazuje
                 Coordinates referenceObjectCoordinates;
 
+                //Zjištění, jestli se actualComponent odkazuje na nějaký jiný objekt
                 if (actualComponent.toLeftOf > 0) {
                     referenceObject = getChildById(actualComponent.toLeftOf);
 
