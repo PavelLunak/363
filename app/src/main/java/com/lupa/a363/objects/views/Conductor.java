@@ -5,6 +5,7 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.RectF;
 import android.os.Build;
 import android.util.AttributeSet;
 
@@ -28,8 +29,8 @@ public class Conductor extends Component {
     int endToX = 0;
     int endToY = 0;
 
-    int centerX = (COMPONENT_WIDTH + (2 * COMPONENT_FRAME)) / 2;
-    int centerY = (COMPONENT_HEIGHT + (2 * COMPONENT_FRAME)) / 2;
+    int centerX = (int) ((COMPONENT_WIDTH + (2 * COMPONENT_FRAME)) / 2);
+    int centerY = (int) ((COMPONENT_HEIGHT + (2 * COMPONENT_FRAME)) / 2);
 
 
     public Conductor(Context context) {
@@ -114,8 +115,8 @@ public class Conductor extends Component {
         paint = new Paint();
 
         this.dimensions = new Dimensions(
-                COMPONENT_WIDTH + (2 * (COMPONENT_FRAME + NODE_POINT_RADIUS)),
-                COMPONENT_HEIGHT + (2 * (COMPONENT_FRAME + NODE_POINT_RADIUS)),
+                (int) (COMPONENT_WIDTH + (2 * (COMPONENT_FRAME + NODE_POINT_RADIUS))),
+                (int) (COMPONENT_HEIGHT + (2 * (COMPONENT_FRAME + NODE_POINT_RADIUS))),
                 COMPONENT_PADDING);
 
         setCoordinates(1,1);
@@ -136,6 +137,8 @@ public class Conductor extends Component {
 
         drawStart(canvas);
         drawEnd(canvas);
+
+        if (createStartNode) drawStartNodePoint(canvas);
     }
 
     private void drawStart(Canvas canvas) {
@@ -148,25 +151,25 @@ public class Conductor extends Component {
                 if (createStartNode) startFromX = 0;    //Protáhne napojení do vedlejšího objektu a vytvoří uzel
                 else startFromX = COMPONENT_FRAME;
 
-                startFromY = (COMPONENT_HEIGHT + (2 * COMPONENT_FRAME)) / 2;
+                startFromY = (int) ((COMPONENT_HEIGHT + (2 * COMPONENT_FRAME)) / 2);
                 break;
             case TOP:
-                startFromX = (COMPONENT_WIDTH + (2 * COMPONENT_FRAME)) / 2;
+                startFromX = (int) ((COMPONENT_WIDTH + (2 * COMPONENT_FRAME)) / 2);
 
                 if (createStartNode) startFromY = 0;
                 else startFromY = COMPONENT_FRAME;
                 break;
             case RIGHT:
-                if (createStartNode) startFromX = COMPONENT_WIDTH + (2 * COMPONENT_FRAME);
-                else startFromY = startFromX = COMPONENT_WIDTH + (COMPONENT_FRAME);
+                if (createStartNode) startFromX = (int) (COMPONENT_WIDTH + (2 * COMPONENT_FRAME));
+                else startFromX = (int) (COMPONENT_WIDTH + (COMPONENT_FRAME));
 
-                startFromY = (COMPONENT_HEIGHT + (2 * COMPONENT_FRAME)) / 2;
+                startFromY = (int) ((COMPONENT_HEIGHT + (2 * COMPONENT_FRAME)) / 2);
                 break;
             case BOTTOM:
-                startFromX = (COMPONENT_WIDTH + (2 * COMPONENT_FRAME)) / 2;
+                startFromX = (int) ((COMPONENT_WIDTH + (2 * COMPONENT_FRAME)) / 2);
 
-                if (createStartNode) startFromY = COMPONENT_HEIGHT + (2 * COMPONENT_FRAME);
-                else startFromY = COMPONENT_HEIGHT + (COMPONENT_FRAME);
+                if (createStartNode) startFromY = (int) (COMPONENT_HEIGHT + (2 * COMPONENT_FRAME));
+                else startFromY = (int) (COMPONENT_HEIGHT + (COMPONENT_FRAME));
                 break;
         }
 
@@ -188,25 +191,25 @@ public class Conductor extends Component {
                 if (createEndNode) endToX = 0;
                 else endToX = COMPONENT_FRAME;
 
-                endToY = (COMPONENT_HEIGHT + (2 * COMPONENT_FRAME)) / 2;
+                endToY = (int) ((COMPONENT_HEIGHT + (2 * COMPONENT_FRAME)) / 2);
                 break;
             case TOP:
-                endToX = (COMPONENT_WIDTH + (2 * COMPONENT_FRAME)) / 2;
+                endToX = (int) ((COMPONENT_WIDTH + (2 * COMPONENT_FRAME)) / 2);
 
                 if (createEndNode) endToY = 0;
                 else endToY = COMPONENT_FRAME;
                 break;
             case RIGHT:
-                if (createEndNode) endToX = COMPONENT_WIDTH + (2 * COMPONENT_FRAME);
-                else endToX = COMPONENT_WIDTH + COMPONENT_FRAME;
+                if (createEndNode) endToX = (int) (COMPONENT_WIDTH + (2 * COMPONENT_FRAME));
+                else endToX = (int) (COMPONENT_WIDTH + COMPONENT_FRAME);
 
-                endToY = (COMPONENT_HEIGHT + (2 * COMPONENT_FRAME)) / 2;
+                endToY = (int) ((COMPONENT_HEIGHT + (2 * COMPONENT_FRAME)) / 2);
                 break;
             case BOTTOM:
-                if (createEndNode) endToY = COMPONENT_HEIGHT + (2 * COMPONENT_FRAME);
-                else endToY = COMPONENT_HEIGHT + COMPONENT_FRAME;
+                if (createEndNode) endToY = (int) (COMPONENT_HEIGHT + (2 * COMPONENT_FRAME));
+                else endToY = (int) (COMPONENT_HEIGHT + COMPONENT_FRAME);
 
-                endToX = (COMPONENT_WIDTH + (2 * COMPONENT_FRAME)) / 2;
+                endToX = (int) ((COMPONENT_WIDTH + (2 * COMPONENT_FRAME)) / 2);
                 break;
         }
 
@@ -216,5 +219,29 @@ public class Conductor extends Component {
                 endToX,
                 endToY,
                 paint);
+    }
+
+    private void drawStartNodePoint(Canvas canvas) {
+        paint.setStyle(Paint.Style.FILL);
+        paint.setStrokeWidth(NODE_POINT_RADIUS);
+        paint.setColor(Color.BLACK);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            canvas.drawOval(
+                    startFromX - NODE_POINT_RADIUS,
+                    startFromY - (2 * NODE_POINT_RADIUS),
+                    startFromX + NODE_POINT_RADIUS,
+                    startFromY,
+                    paint);
+        } else {
+            RectF rectF = new RectF(
+                    startFromX - NODE_POINT_RADIUS,
+                    startFromY - (2 * NODE_POINT_RADIUS),
+                    startFromX + NODE_POINT_RADIUS,
+                    startFromY
+            );
+
+            canvas.drawOval(rectF, paint);
+        }
     }
 }

@@ -108,9 +108,9 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 app:cCreateEndNode="false"
-                                app:cCreateStartNode="false"
-                                app:ccStart="RIGHT"
-                                app:ccStop="TOP" />
+                                app:cCreateStartNode="true"
+                                app:ccStart="BOTTOM"
+                                app:ccStop="RIGHT" />
 
                         </com.lupa.a363.objects.views.LayoutWiringDiagram>
 

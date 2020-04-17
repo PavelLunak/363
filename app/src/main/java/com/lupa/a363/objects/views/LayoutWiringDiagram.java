@@ -54,8 +54,8 @@ public class LayoutWiringDiagram extends ViewGroup implements AppConstants {
         //Log.i("bcwcbwe", "COMPONENT_WIDTH: " + COMPONENT_WIDTH);
         //Log.i("bcwcbwe", "COMPONENT_HEIGHT: " + COMPONENT_HEIGHT);
 
-        int width = maxX * COMPONENT_WIDTH;
-        int height = maxY * COMPONENT_HEIGHT;
+        int width = (int) (maxX * COMPONENT_WIDTH);
+        int height = (int) (maxY * COMPONENT_HEIGHT);
 
         Log.i("bcwcbwe", "width: " + width);
         Log.i("bcwcbwe", "height: " + height);
@@ -123,20 +123,20 @@ public class LayoutWiringDiagram extends ViewGroup implements AppConstants {
             }
 
             int tempLeft =
-                    COMPONENT_FRAME
+                    (int) (COMPONENT_FRAME
                             + (actualComponent.getCoordinates().getX() * (COMPONENT_WIDTH + (0 * COMPONENT_FRAME)))
-                            - (COMPONENT_WIDTH + (2 * COMPONENT_FRAME));
+                            - (COMPONENT_WIDTH + (2 * COMPONENT_FRAME)));
 
             int tempTop =
-                    COMPONENT_FRAME
+                    (int) (COMPONENT_FRAME
                             + (actualComponent.getCoordinates().getY() * (COMPONENT_HEIGHT + (0 * COMPONENT_FRAME)))
-                            - (COMPONENT_HEIGHT + (2 * COMPONENT_FRAME));
+                            - (COMPONENT_HEIGHT + (2 * COMPONENT_FRAME)));
 
             getChildAt(i).layout(
-                    tempLeft - NODE_POINT_RADIUS,
-                    tempTop - NODE_POINT_RADIUS,
-                    tempLeft + (COMPONENT_WIDTH + (2 * COMPONENT_FRAME)) + NODE_POINT_RADIUS,
-                    tempTop + (COMPONENT_HEIGHT + (2 * COMPONENT_FRAME)) + NODE_POINT_RADIUS);
+                    (int) (tempLeft - NODE_POINT_RADIUS),
+                    (int) (tempTop - NODE_POINT_RADIUS),
+                    (int) (tempLeft + (COMPONENT_WIDTH + (2 * COMPONENT_FRAME)) + NODE_POINT_RADIUS),
+                    (int) (tempTop + (COMPONENT_HEIGHT + (2 * COMPONENT_FRAME)) + NODE_POINT_RADIUS));
         }
     }
 
@@ -163,20 +163,20 @@ public class LayoutWiringDiagram extends ViewGroup implements AppConstants {
                 ((Component) v).getCoordinates().addX();
 
                 int left =
-                        COMPONENT_FRAME
+                        (int) (COMPONENT_FRAME
                                 + (((Component) v).getCoordinates().getX() * (COMPONENT_WIDTH + (0 * COMPONENT_FRAME)))
-                                - (COMPONENT_WIDTH + (2 * COMPONENT_FRAME));
+                                - (COMPONENT_WIDTH + (2 * COMPONENT_FRAME)));
 
                 int top =
-                        COMPONENT_FRAME
+                        (int) (COMPONENT_FRAME
                                 + (((Component) v).getCoordinates().getY() * (COMPONENT_HEIGHT + (0 * COMPONENT_FRAME)))
-                                - (COMPONENT_HEIGHT + (2 * COMPONENT_FRAME));
+                                - (COMPONENT_HEIGHT + (2 * COMPONENT_FRAME)));
 
                 getChildAt(i).layout(
-                        left - NODE_POINT_RADIUS,
-                        top - NODE_POINT_RADIUS,
-                        left + (COMPONENT_WIDTH + (2 * COMPONENT_FRAME)) + NODE_POINT_RADIUS,
-                        top + (COMPONENT_HEIGHT + (2 * COMPONENT_FRAME)) + NODE_POINT_RADIUS);
+                        (int) (left - NODE_POINT_RADIUS),
+                        (int) (top - NODE_POINT_RADIUS),
+                        (int) (left + (COMPONENT_WIDTH + (2 * COMPONENT_FRAME)) + NODE_POINT_RADIUS),
+                        (int) (top + (COMPONENT_HEIGHT + (2 * COMPONENT_FRAME)) + NODE_POINT_RADIUS));
             }
         }
     }
@@ -191,20 +191,20 @@ public class LayoutWiringDiagram extends ViewGroup implements AppConstants {
                 ((Component) v).getCoordinates().addY();
 
                 int left =
-                        COMPONENT_FRAME
+                        (int) (COMPONENT_FRAME
                                 + (((Component) v).getCoordinates().getX() * (COMPONENT_WIDTH + (0 * COMPONENT_FRAME)))
-                                - (COMPONENT_WIDTH + (2 * COMPONENT_FRAME));
+                                - (COMPONENT_WIDTH + (2 * COMPONENT_FRAME)));
 
                 int top =
-                        COMPONENT_FRAME
+                        (int) (COMPONENT_FRAME
                                 + (((Component) v).getCoordinates().getY() * (COMPONENT_HEIGHT + (0 * COMPONENT_FRAME)))
-                                - (COMPONENT_HEIGHT + (2 * COMPONENT_FRAME));
+                                - (COMPONENT_HEIGHT + (2 * COMPONENT_FRAME)));
 
                 getChildAt(i).layout(
-                        left - NODE_POINT_RADIUS,
-                        top - NODE_POINT_RADIUS,
-                        left + (COMPONENT_WIDTH + (2 * COMPONENT_FRAME)) + NODE_POINT_RADIUS,
-                        top + (COMPONENT_HEIGHT + (2 * COMPONENT_FRAME)) + NODE_POINT_RADIUS);
+                        (int) (left - NODE_POINT_RADIUS),
+                        (int) (top - NODE_POINT_RADIUS),
+                        (int) (left + (COMPONENT_WIDTH + (2 * COMPONENT_FRAME)) + NODE_POINT_RADIUS),
+                        (int) (top + (COMPONENT_HEIGHT + (2 * COMPONENT_FRAME)) + NODE_POINT_RADIUS));
             }
         }
     }

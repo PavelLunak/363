@@ -1,5 +1,6 @@
 package com.lupa.a363.objects.views;
 
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -12,8 +13,6 @@ import android.util.AttributeSet;
 
 import com.lupa.a363.R;
 
-import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
 
 public class ComponentContact extends Component {
 
@@ -32,18 +31,18 @@ public class ComponentContact extends Component {
         init();
     }
 
-    public ComponentContact(Context context, @Nullable AttributeSet attrs) {
+    public ComponentContact(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
     }
 
-    public ComponentContact(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public ComponentContact(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    public ComponentContact(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    public ComponentContact(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         init();
     }
@@ -138,11 +137,11 @@ public class ComponentContact extends Component {
         float scale = 0.7f;
 
         if (orientation == Orientation.VERTICAL) {
-            blankPointX = ((COMPONENT_WIDTH + (2 * COMPONENT_FRAME)) / 2);
+            blankPointX = (int) ((COMPONENT_WIDTH + (2 * COMPONENT_FRAME)) / 2);
             blankPointY = (int) ((float) (COMPONENT_HEIGHT + (2 * COMPONENT_FRAME)) * scale) - COMPONENT_PADDING;
         } else {
             blankPointX = COMPONENT_PADDING + (int) ((float) (COMPONENT_WIDTH + (2 * COMPONENT_FRAME)) * 0.3);
-            blankPointY = ((COMPONENT_WIDTH + (2 * COMPONENT_FRAME)) / 2);
+            blankPointY = (int) ((COMPONENT_WIDTH + (2 * COMPONENT_FRAME)) / 2);
         }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -175,7 +174,7 @@ public class ComponentContact extends Component {
             canvas.drawLine(
                     blankPointX,
                     blankPointY - BLANK_POINT_RADIUS,
-                    blankPointX - CONTACT_OPENING_WIDTH,
+                    blankPointX - 20,//CONTACT_OPENING_WIDTH,
                     blankPointY - CONTACT_LENGTH - overlap,
                     paint
             );
@@ -184,7 +183,7 @@ public class ComponentContact extends Component {
                     blankPointX + BLANK_POINT_RADIUS,
                     blankPointY,
                     blankPointX + CONTACT_LENGTH + overlap,
-                    blankPointY - CONTACT_OPENING_WIDTH,
+                    blankPointY - 20,//CONTACT_OPENING_WIDTH,
                     paint
             );
         }
@@ -196,7 +195,7 @@ public class ComponentContact extends Component {
 
         int overlap = (int) ((float)CONTACT_LENGTH * 0.1);
 
-        double length = Math.sqrt(Math.pow(CONTACT_OPENING_WIDTH, 2) + Math.pow(CONTACT_LENGTH - overlap, 2));
+        double length = Math.sqrt(Math.pow(20/*CONTACT_OPENING_WIDTH*/, 2) + Math.pow(CONTACT_LENGTH - overlap, 2));
         double angle = -1 * (180 * ((Math.pow(Math.cos((CONTACT_LENGTH - overlap) / length), -1)) / Math.PI));
         int pivotX;
         int pivotY;
@@ -207,7 +206,7 @@ public class ComponentContact extends Component {
         canvas.save();
 
         if (orientation == Orientation.VERTICAL) {
-            pivotX = (int) (blankPointX - CONTACT_OPENING_WIDTH);
+            pivotX = (int) (blankPointX - 20/*CONTACT_OPENING_WIDTH*/);
             pivotY = (int) (blankPointY - CONTACT_LENGTH - overlap);
 
             canvas.rotate((float) angle + 90, pivotX, pivotY);
@@ -219,7 +218,7 @@ public class ComponentContact extends Component {
                     pivotY + rectWidth);
         } else {
             pivotX = (int) (blankPointX + CONTACT_LENGTH + overlap);
-            pivotY = (int) (blankPointY - CONTACT_OPENING_WIDTH);
+            pivotY = (int) (blankPointY - 20/*CONTACT_OPENING_WIDTH*/);
 
             canvas.rotate((float) angle + 90, pivotX, pivotY);
 

@@ -1,5 +1,6 @@
 package com.lupa.a363.objects.views;
 
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -10,24 +11,22 @@ import android.util.AttributeSet;
 
 import com.lupa.a363.utils.AppUtils;
 
-import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
 
 public class ComponentRelay extends Component {
     public ComponentRelay(Context context) {
         super(context);
     }
 
-    public ComponentRelay(Context context, @Nullable AttributeSet attrs) {
+    public ComponentRelay(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public ComponentRelay(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public ComponentRelay(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    public ComponentRelay(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    public ComponentRelay(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
     }
 
@@ -101,10 +100,10 @@ public class ComponentRelay extends Component {
         paint.setStrokeWidth(CONDUCTOR_WIDTH);
         paint.setColor(Color.BLACK);
 
-        int stopY = COMPONENT_FRAME + COMPONENT_HEIGHT;
+        int stopY = (int) (COMPONENT_FRAME + COMPONENT_HEIGHT);
 
         if (append) {
-            stopY = COMPONENT_FRAME + COMPONENT_HEIGHT + COMPONENT_FRAME;
+            stopY = (int) (COMPONENT_FRAME + COMPONENT_HEIGHT + COMPONENT_FRAME);
         }
 
         canvas.drawLine(
@@ -210,7 +209,7 @@ public class ComponentRelay extends Component {
         float textWidth = paint.measureText(/*"" + coordinates.getX() + "," + coordinates.getY()*/this.label);
         int maxTextWidth = (int)((float)COMPONENT_WIDTH * 0.7);
 
-        int centerY = (COMPONENT_HEIGHT + (2 * COMPONENT_FRAME)) / 2;
+        int centerY =(int) ((COMPONENT_HEIGHT + (2 * COMPONENT_FRAME)) / 2);
         int yPos = (int) (centerY - ((paint.descent() + paint.ascent()) / 2)) ;
 
         if (textWidth > maxTextWidth) {
@@ -240,7 +239,7 @@ public class ComponentRelay extends Component {
         float textWidth = paint.measureText(errText);
         int maxTextWidth = (int)((float)(COMPONENT_WIDTH + (2 * COMPONENT_FRAME)) * 0.9);
 
-        int centerY = (COMPONENT_HEIGHT + (2 * COMPONENT_FRAME)) / 2;
+        int centerY = (int) ((COMPONENT_HEIGHT + (2 * COMPONENT_FRAME)) / 2);
         int yPos = (int) (centerY - ((paint.descent() + paint.ascent()) / 2)) ;
 
         if (textWidth > maxTextWidth) {

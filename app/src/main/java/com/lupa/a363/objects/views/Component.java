@@ -130,8 +130,8 @@ public abstract class Component extends View implements AppConstants {
 
     private void init() {
         this.dimensions = new Dimensions(
-                COMPONENT_WIDTH + (2 * (COMPONENT_FRAME + NODE_POINT_RADIUS)),
-                COMPONENT_HEIGHT + (2 * (COMPONENT_FRAME + NODE_POINT_RADIUS)),
+                (int) (COMPONENT_WIDTH + (2 * (COMPONENT_FRAME + NODE_POINT_RADIUS))),
+                (int) (COMPONENT_HEIGHT + (2 * (COMPONENT_FRAME + NODE_POINT_RADIUS))),
                 COMPONENT_PADDING);
 
         setCoordinates(1,1);
@@ -168,6 +168,7 @@ public abstract class Component extends View implements AppConstants {
                 paint);
     }
 
+    //Vykreslí ohraničení oblasti objektu
     private void drawDistrict(Canvas canvas) {
         Paint paint = new Paint();
         paint.setStyle(Paint.Style.STROKE);
@@ -182,6 +183,7 @@ public abstract class Component extends View implements AppConstants {
                 paint);
     }
 
+    //Vykreslí ohraničení oblasti objektu odsazené o NODE_POINT_RADIUS
     private void drawDistrictWithoutNode(Canvas canvas) {
         Paint paint = new Paint();
         paint.setStyle(Paint.Style.STROKE);

@@ -16,4 +16,5 @@
     <color name="text_dialog_header">#FFFFFF</color>
     <color name="text_dialog_button">#FFFFFF</color>
     <color name="text_footer_series">#FFFFFF</color>
+    <color name="conductor_color">#000000</color>
 </resources>
